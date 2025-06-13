@@ -1,10 +1,8 @@
-import os
-from dotenv import load_dotenv
+import logging
 
-load_dotenv()
+# Configurando logging pra gravar tudo num arquivo chamado neuroScalp.log
+logging.basicConfig(filename='neuroScalp.log',
+                    level=logging.INFO,
+                    format=' %(asctime)s - %(levelname)s - %(message)s')
 
-binance_key = os.getenv("BINANCE_API_KEY")
-binance_secret = os.getenv("BINANCE_SECRET_KEY")
-
-print("API Key da Binance :", binance_key)
-print("API Secret da Binance :", binance_secret)
+logging.info('Iniciando o bot...')
