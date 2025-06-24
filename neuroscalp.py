@@ -9,36 +9,31 @@ load_dotenv()
 
 client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 
-LIMIAR_VOLUME = 0.01
+LIMIAR_VOLUME = 0.000000001
 SYMBOL = "btcusdt"
-
 URL = f"wss://stream.binance.com:9443/stream?streams={SYMBOL}@depth@100ms/{SYMBOL}@aggTrade/{SYMBOL}@kline_1m"
 
 PROMPT_BASE = """
-Você é um sistema de trading autônomo.
 
-Receberá dados em tempo real do mercado: book, candle e fluxo.
 
-Decida se deve ENTRAR COMPRADO, ENTRAR VENDIDO ou AGUARDAR.
+Está recebendo dados em tempo real do BTC/USDT:
 
-Lembre-se:
+- Fluxo de ordens (agregadas)
+- Livro de ofertas (book)
+- Candle de 1 minuto (kline)
 
-- Toda entrada precisa cobrir as taxas da Binance (0.3% + 0.3%)
-- A decisão deve ser com foco em identificar o início de tendências
-- Encerre posições antes de uma possível reversão
+Apenas diga se está recebendo todos corretamente. nao esqueca de responder do grafico de falar se esta recebendo ele tambem
+eu tenho que lapidar o codigo 
 
-Responda apenas com:
-COMPRAR
-VENDER
 
-senao fique em silencio espernando a decisao 
+
 """
 
-# função para enviar os dados ao GPT
+# Função para enviar ao GPT
 async def enviar_ao_gpt(dados):
     try:
         resposta = client.chat.completions.create(
-            model="gpt-4.1-mini-2025-04-14",  # ou o que você tiver habilitado
+            model="gpt-4.1-mini-2025-04-14",
             messages=[
                 {"role": "system", "content": PROMPT_BASE},
                 {"role": "user", "content": json.dumps(dados)}
@@ -46,11 +41,11 @@ async def enviar_ao_gpt(dados):
             temperature=0
         )
         decisao = resposta.choices[0].message.content.strip()
-        print("📤 Decisão do GPT:", decisao)
+        print("📤 GPT:", decisao)
     except Exception as e:
         print("Erro com o GPT:", e)
 
-# função principal
+# Função principal
 async def conectar():
     print(f"Conectando ao WebSocket da Binance para {SYMBOL.upper()}...")
     async with websockets.connect(URL) as ws:
@@ -65,27 +60,34 @@ async def conectar():
                 if "@aggTrade" in stream:
                     preco = float(conteudo['p'])
                     volume = float(conteudo['q'])
-                    comprador = conteudo['m'] == False
+                    comprador = not conteudo['m']
+
+                    print(f"🟡 Fluxo detectado: {preco} | {volume} | {'compra' if comprador else 'venda'}")
 
                     if volume >= LIMIAR_VOLUME:
-                        json_limpo = {
+                        fluxo = {
                             "tipo": "fluxo",
                             "preco": preco,
                             "volume": volume,
                             "comprador": comprador
                         }
-                        await enviar_ao_gpt(json_limpo)
+                        await enviar_ao_gpt(fluxo)
 
                 elif "@depth" in stream:
-                    bids = [[float(p), float(q)] for p, q in conteudo.get('bids', []) if float(q) >= LIMIAR_VOLUME]
-                    asks = [[float(p), float(q)] for p, q in conteudo.get('asks', []) if float(q) >= LIMIAR_VOLUME]
+                    bids_raw = conteudo.get('bids', [])
+                    asks_raw = conteudo.get('asks', [])
 
-                    json_limpo = {
+                    bids = [[float(p), float(q)] for p, q in bids_raw if float(q) >= LIMIAR_VOLUME]
+                    asks = [[float(p), float(q)] for p, q in asks_raw if float(q) >= LIMIAR_VOLUME]
+
+                    print(f"🟢 Book atualizado: {len(bids)} bids | {len(asks)} asks")
+
+                    book = {
                         "tipo": "book",
-                        "bids": bids[:5],
-                        "asks": asks[:5]
+                        "bids": bids,
+                        "asks": asks
                     }
-                    await enviar_ao_gpt(json_limpo)
+                    await enviar_ao_gpt(book)
 
                 elif "@kline" in stream:
                     k = conteudo['k']
@@ -97,12 +99,16 @@ async def conectar():
                         "minima": float(k['l']),
                         "volume": float(k['v'])
                     }
+
+                    print(f"🔵 Candle fechado: {candle['volume']} | Abertura: {candle['abertura']} | Fechamento: {candle['fechamento']}")
+
                     await enviar_ao_gpt(candle)
 
             except Exception as e:
-                print("Erro na leitura do WebSocket:", e)
-                await asyncio.sleep(2)
+                print("Erro no WebSocket:", e)
+                await asyncio.sleep(1)
 
-# executa
+
+# Executa
 if __name__ == "__main__":
     asyncio.run(conectar())
