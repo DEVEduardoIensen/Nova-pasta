@@ -29,7 +29,7 @@ prompt_sistema = {
 - Livro de ofertas (book)
 - Candle de 1 minuto (kline)
 
-Apenas diga se está recebendo todos corretamente. nao esqueca de responder do grafico de falar se esta recebendo ele tambem
+Apenas diga se está recebendo todos corretamente. nao esqueca de responder do grafico de falar se esta recebendo ele tambem, e diga o conteudo todo que voce recebeu do book
 eu tenho que lapidar o codigo 
  voce pode me dizer o que voce esta recebendo e como esta recebendo"""
 }
