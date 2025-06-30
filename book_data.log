@@ -1,0 +1,204 @@
+
+
+✅ ESTRUTURA LÓGICA DO PROJETO NEUROSCALP (v1.0 - TESTES)
+
+📌 Objetivo:
+
+Criar um sistema modular onde o GPT-4.1-mini recebe dados em tempo real da Binance (via WebSocket) e:
+
+Analisa candles, fluxo de ordens e book.
+
+Sugere entradas/saídas automaticamente.
+
+Ajusta os tempos dos dados (ms) quando quiser.
+
+Se comunica com o operador humano como um sócio.
+
+
+
+---
+
+📁 Estrutura de arquivos (oficial):
+
+📂 projeto_neuroscalp
+├── main.py                  # Onde o GPT decide "COMPRA", "VENDA", ou fica em silêncio (execução futura)
+├── envio_fluxo.py           # Envia apenas: preço atual + fluxo de ordens (super rápido)
+├── envio_grafico_book.py    # Envia apenas: candle 1m + livro de ofertas (em menor frequência)
+├── conversa_manual.py       # Canal direto com o GPT para conversar como se fosse seu sócio
+├── ip.py                    # Verificação do IP atual e ativação de modo pausa automático se mudar
+├── log_envio_gpt.json       # Espelho dos dados enviados pro GPT (debug)pra validar se esta indo os dados certos
+├── memory_gpt.json          # Backup de contexto (memória seletiva escrita pelo GPT)
+├── log_conversa_manual.json # Histórico completo das conversas no terminal manual
+
+
+---
+
+🔄 Sobre os JSONs enviados
+
+Separação total, como o GPT sugeriu:
+
+1. envio_fluxo.py
+
+preco_atual
+
+fluxo_ordens
+
+
+
+2. envio_grafico_book.py
+
+kline_1m
+
+order_book
+
+
+
+
+Isso permite controle de frequência diferente por tipo de dado, melhora a assertividade e economiza tokens.
+
+
+---
+
+⏱ Frequência dos dados (ms)
+
+Os ms são configuráveis diretamente nos arquivos envio_fluxo.py e envio_grafico_book.py.
+
+O GPT pode sugerir mudanças de tempo, mas você aplica no código manualmente (pelo menos por enquanto).
+
+Nada muda sem sua aprovação explícita.
+
+
+
+---
+
+🧑‍💻 Sobre o main.py
+
+É fixo. Não é temporário.
+
+É o núcleo executor: recebe os dados e envia pro GPT decidir entrada/saída.
+
+O GPT responde com algo como:
+
+ENTRAR COMPRADO COM ORDEM MERCADO USANDO 23 USDT
+
+Se não for hora de entrar ou sair, o GPT fica em silêncio.
+
+Futuramente, ele controlará ordens reais (mercado, limit, stop limit).
+
+
+
+
+
+💬 conversa_manual.py
+
+Canal direto entre você e o GPT.
+
+Serve pra:
+
+Perguntar coisas: “Qual ms ideal?”, “Qual assertividade?”
+
+GPT mandar mensagens espontâneas: “Recomendo reduzir o ms do fluxo.”
+
+
+Possui vida própria, com histórico em log_conversa_manual.json.
+
+Pode ser usado pra informar saldo, pedir análises, questionar decisões, etc.
+
+
+
+---
+
+💸 Sobre o valor da banca e gestão de risco
+
+O GPT executor decidirá quanto da banca usar por operação.
+
+Pode usar tudo, parte, ou quase nada, baseado no risco e contexto da entrada.
+
+O valor da banca pode ser informado por você no conversa_manual.py, e o GPT guardará no memory_gpt.json.
+
+Nenhuma regra fixa de "1%" ou "sempre 10 USDT" — a decisão é sempre contextual.
+
+
+
+---
+
+💾 memory_gpt.json
+
+Memória auxiliar persistente.
+
+Escrito pelo GPT (com ou sem comando seu) com informações relevantes:
+
+"Saldo atual: 150 USDT"
+
+"Ativar modo conservador"
+
+"Última operação: venda parcial"
+
+
+Você pode apagar, editar ou restaurar como quiser.
+
+
+
+---
+
+💬 log_conversa_manual.json
+
+Guarda tudo que foi conversado no terminal manual.
+
+Tipo um WhatsApp: conversa bruta.
+
+Pode ser apagado ou limpo manualmente.
+
+Serve como histórico de análise e auditoria.
+
+
+
+---
+
+🔐 ip.py
+
+Verifica o IP da sua conexão a cada 1 segundo.
+
+Se o IP mudar (o que pode acontecer na sua internet dinâmica), o sistema:
+
+1. Pausa automaticamente a execução.
+
+
+2. Exibe o novo IP no terminal, pra você atualizar rápido na Binance.
+
+
+3. Toca alerta sonoro.
+
+
+4. O GPT só manda mensagens administrativas.
+
+
+5. Retoma operação somente quando você digitar "." ou "L" no terminal.
+
+
+
+
+✅ Garante que nenhuma ordem seja enviada com IP não autorizado.
+
+
+---
+
+🔌 Conexão real com a Binance
+
+Atualmente em modo paper trading (testes manuais no TradingView).
+
+Após validação de assertividade, o sistema será conectado à API da Binance:
+
+Chaves secretas protegidas.
+
+Controle real de saldo, ordens e resposta em tempo real.
+
+
+A gestão ainda será 100% decidida pelo GPT.
+
+
+
+---
+
+Checklist finalizada. ✅
+Tudo modular, claro, profissional e pronto pra dividir com outros chats.
