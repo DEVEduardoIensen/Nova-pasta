@@ -6,7 +6,13 @@ from datetime import datetime, timezone
 
 # ========== CONFIG ==========
 ms_fluxo = 5  # frequência de envio (ms)
-limite_ordens = 10  # LIMITE TEMPORÁRIO só pra evitar inchaço no JSON
+
+# ========== FORMATADORES ==========
+def formatar_preco(valor):
+    return "{:.2f}".format(float(valor))
+
+def formatar_volume(valor):
+    return "{:.5f}".format(float(valor))
 
 # ========== DADOS ==========
 dados_fluxo = {
@@ -22,23 +28,22 @@ def coletor_fluxo():
         trade = json.loads(msg)
 
         dados_fluxo["timestamp"] = datetime.now(timezone.utc).isoformat()
-        dados_fluxo["preco_atual"] = trade["p"]
+        dados_fluxo["preco_atual"] = formatar_preco(trade["p"])
 
         nova_ordem = {
             "tipo": "buy" if not trade["m"] else "sell",
-            "preco": trade["p"],
-            "quantidade": trade["q"]
+            "preco": formatar_preco(trade["p"]),
+            "quantidade": formatar_volume(trade["q"])
         }
 
         dados_fluxo["fluxo_ordens"].append(nova_ordem)
 
-        if len(dados_fluxo["fluxo_ordens"]) > limite_ordens:
-            dados_fluxo["fluxo_ordens"].pop(0)
+        # ❌ REMOVIDO: limite_ordens = X (agora é produção total)
 
     ws = websocket.WebSocketApp("wss://stream.binance.com:9443/ws/btcusdt@trade", on_message=on_message)
     ws.run_forever()
 
-# ========== LOOP DE LOG ==========
+# ========== LOOP DE ENVIO ==========
 def salvar_em_log_envio_gpt():
     while True:
         try:
@@ -49,13 +54,13 @@ def salvar_em_log_envio_gpt():
                     "timestamp_envio": datetime.now(timezone.utc).isoformat()
                 }, indent=2) + "\n\n")
         except Exception as e:
-            print("❌ Erro ao salvar no log_envio_gpt.json:", e)
+            print("❌ Erro ao salvar no log:", e)
 
         time.sleep(ms_fluxo / 1000)
 
 # ========== EXECUÇÃO ==========
 if __name__ == "__main__":
-    print("📡 Coletando fluxo de ordens e salvando no log_envio_gpt.json...")
+    print("📡 Coletando fluxo (modo produção) e salvando no log_envio_gpt.json...")
     threading.Thread(target=coletor_fluxo, daemon=True).start()
     threading.Thread(target=salvar_em_log_envio_gpt, daemon=True).start()
 
