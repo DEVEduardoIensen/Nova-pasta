@@ -7,15 +7,12 @@ from queue import Queue
 import requests
 import winsound
 import os
-from openai import OpenAI
+import openai
+from utils_memory import exportar_memoria_texto
 
-# ======== GPT CONFIG ========
-token = os.environ["GITHUB_TOKEN"]
-client = OpenAI(
-    base_url="https://models.github.ai/inference",
-    api_key=token,
-)
-
+# ======== GPT CONFIG - API OFICIAL OPENAI ========
+openai.api_key = os.getenv("OPENAI_API_KEY")
+modelo = "gpt-4.1-mini-2025-04-14"
 
 # ======== LIMPEZA DE LOG GPT ========
 def limpar_log_periodicamente(intervalo=5):
@@ -26,11 +23,6 @@ def limpar_log_periodicamente(intervalo=5):
         except Exception as e:
             print(f"❌ Erro ao limpar o log: {e}")
         time.sleep(intervalo)
-
-
-
-
-
 
 # ======== IMPORTANDO OS MÓDULOS =========
 from envio_fluxo import iniciar_fluxo
@@ -87,18 +79,24 @@ def monitorar_ip():
 # ======== GPT ENVIO =========
 def enviar_para_gpt(tipo, dados):
     try:
+        memoria_atual = exportar_memoria_texto()
+
         prompt = {
             "role": "system",
-            "content": "Você está recebendo dados do BTC/USDT em tempo real. Confirme o  recebimento está correto do fluxo de ordens."
+            "content": ( 
+                "Considere as informações abaixo salvas anteriormente como contexto atual do sistema:\n\n"
+                f"{memoria_atual}\n\n"
+                
+            )
         }
 
-        response = client.chat.completions.create(
-            model="openai/gpt-4.1-mini",
+        response = openai.ChatCompletion.create(
+            model=modelo,
             messages=[prompt, {"role": "user", "content": json.dumps(dados)}],
             temperature=0.2
         )
 
-        print(f"🧠 GPT ({tipo.upper()}):", response.choices[0].message.content)
+        print(f"🧠 GPT ({tipo.upper()}):", response["choices"][0]["message"]["content"])
 
         with open("log_envio_gpt.json", "a") as f:
             f.write(json.dumps({
@@ -119,26 +117,25 @@ def monitorar_filas():
 
         if not queue_fluxo.empty():
             pacote = queue_fluxo.get()
-            print("📦 FLUXO ENTREGUE AO MAIN:", pacote["dados"]["fluxo_ordens"][-1])  # DEBUG 👈
+
             enviar_para_gpt(pacote["tipo"], pacote["dados"])
 
         if not queue_book.empty():
             pacote = queue_book.get()
-            print("📘 BOOK ENTREGUE AO MAIN")  # DEBUG 👈
+            
             enviar_para_gpt(pacote["tipo"], pacote["dados"])
 
         time.sleep(0.01)
 
 # ======== INÍCIO =========
 if __name__ == "__main__":
-    print("🧠 NeuroScalp MAIN rodando (modular, com debug)...\n")
+    print("🧠 NeuroScalp MAIN rodando (API OpenAI, com memória ativa)...\n")
 
     threading.Thread(target=iniciar_fluxo, args=(queue_fluxo,), daemon=True).start()
     threading.Thread(target=iniciar_grafico_book, args=(queue_book,), daemon=True).start()
     threading.Thread(target=monitorar_ip, daemon=True).start()
     threading.Thread(target=monitorar_filas, daemon=True).start()
     threading.Thread(target=limpar_log_periodicamente, daemon=True).start()
-
 
     while True:
         time.sleep(1)
