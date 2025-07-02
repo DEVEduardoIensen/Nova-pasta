@@ -1,4 +1,30 @@
-{
-    
-}
-
+[
+  {
+    "remetente": "Você",
+    "mensagem": "oi"
+  },
+  {
+    "remetente": "Você",
+    "mensagem": "para"
+  },
+  {
+    "remetente": "GPT",
+    "mensagem": "Entendido. Pausando operações no NeuroScalp. Me avise quando quiser retomar."
+  },
+  {
+    "remetente": "Você",
+    "mensagem": "oi"
+  },
+  {
+    "remetente": "GPT",
+    "mensagem": "Oi, tudo certo? Quer retomar as operações ou tem alguma outra demanda?"
+  },
+  {
+    "remetente": "Você",
+    "mensagem": "esta recebendo certo os jsons"
+  },
+  {
+    "remetente": "GPT",
+    "mensagem": "Recebendo sim, tudo chegando corretamente. Pode enviar os dados que precisar."
+  }
+]

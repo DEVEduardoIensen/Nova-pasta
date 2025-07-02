@@ -83,30 +83,39 @@ def enviar_para_gpt(tipo, dados):
 
         prompt = {
             "role": "system",
-            "content": ( 
+            "content": (
                 "Considere as informações abaixo salvas anteriormente como contexto atual do sistema:\n\n"
                 f"{memoria_atual}\n\n"
-                
+                "Agora, analise os dados enviados e tome sua decisão com base nisso."
             )
         }
 
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
             model=modelo,
-            messages=[prompt, {"role": "user", "content": json.dumps(dados)}],
+            messages=[
+                prompt,
+                {"role": "user", "content": json.dumps(dados)}
+            ],
             temperature=0.2
         )
 
-        print(f"🧠 GPT ({tipo.upper()}):", response["choices"][0]["message"]["content"])
+        resposta_gpt = response.choices[0].message.content
 
-        with open("log_envio_gpt.json", "a") as f:
-            f.write(json.dumps({
+        # Print seguro pro terminal
+        print(f"🧠 GPT ({tipo.upper()}): {resposta_gpt.encode('utf-8', errors='replace').decode('utf-8')}")
+
+        # Salvando no log
+        with open("log_envio_gpt.json", "a", encoding="utf-8") as f:
+            json.dump({
                 "tipo": tipo,
                 "dados": dados,
                 "timestamp_envio": datetime.now(timezone.utc).isoformat()
-            }, indent=2) + "\n\n")
+            }, f, indent=2, ensure_ascii=False)
+            f.write("\n\n")
 
     except Exception as e:
         print("❌ Erro ao enviar para o GPT:", e)
+
 
 # ======== MONITOR DE FILAS =========
 def monitorar_filas():

@@ -33,14 +33,16 @@ while True:
         mensagens.append({"role": "user", "content": user_input})
         registrar_mensagem("Você", user_input)
 
-        response = openai.ChatCompletion.create(
+        response = openai.chat.completions.create(
+
             model=model,
             messages=mensagens,
             temperature=0.5,
             top_p=1
         )
 
-        resposta_gpt = response['choices'][0]['message']['content'].strip()
+        resposta_gpt = response.choices[0].message.content.strip()
+
         mensagens.append({"role": "assistant", "content": resposta_gpt})
         registrar_mensagem("GPT", resposta_gpt)
 

@@ -1,27 +1,31 @@
-# utils_log_manual.py
 import json
 import os
-from datetime import datetime
 
-LOG_FILE = "log_conversa_manual.json"
+ARQUIVO_LOG = "log_conversa_manual.json"
 
 def carregar_log():
-    if not os.path.exists(LOG_FILE):
-        with open(LOG_FILE, "w") as f:
-            json.dump([], f, indent=2)
-    with open(LOG_FILE, "r") as f:
-        return json.load(f)
+    if not os.path.exists(ARQUIVO_LOG):
+        return []
 
-def registrar_mensagem(papel, mensagem):
+    try:
+        with open(ARQUIVO_LOG, "r", encoding="utf-8") as f:
+            conteudo = f.read().strip()
+            if not conteudo:
+                return []
+            log = json.loads(conteudo)
+            if isinstance(log, list):
+                return log
+            else:
+                return []  # Evita erro se for dict ou lixo
+    except Exception as e:
+        print(f"⚠️ Erro ao carregar log manual: {e}")
+        return []
+
+def registrar_mensagem(remetente, mensagem):
     log = carregar_log()
     log.append({
-        "timestamp": datetime.utcnow().isoformat(),
-        "quem": papel,
+        "remetente": remetente,
         "mensagem": mensagem
     })
-    with open(LOG_FILE, "w") as f:
-        json.dump(log, f, indent=2)
-
-def limpar_log():
-    with open(LOG_FILE, "w") as f:
-        json.dump([], f, indent=2)
+    with open(ARQUIVO_LOG, "w", encoding="utf-8") as f:
+        json.dump(log, f, indent=2, ensure_ascii=False)
