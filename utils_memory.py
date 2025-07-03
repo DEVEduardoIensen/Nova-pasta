@@ -33,4 +33,5 @@ def buscar_valor(parte_da_chave):
 
 def exportar_memoria_texto():
     memoria = carregar_memoria()
-    return "\n".join(memoria.keys())
+    return "\n".join([f"{chave}: {valor}" for chave, valor in memoria.items()])
+

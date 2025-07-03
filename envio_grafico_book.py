@@ -40,4 +40,4 @@ def iniciar_grafico_book(queue):
         "wss://stream.binance.com:9443/ws/btcusdt@kline_1m", on_message=on_kline
     ).run_forever(), daemon=True).start()
 
-    websocket.WebSocketApp("wss://stream.binance.com:9443/ws/btcusdt@depth20@100ms", on_message=on_book).run_forever()
+    websocket.WebSocketApp("wss://stream.binance.com:9443/ws/btcusdt@depth20", on_message=on_book).run_forever()

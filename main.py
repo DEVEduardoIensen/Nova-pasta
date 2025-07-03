@@ -84,9 +84,10 @@ def enviar_para_gpt(tipo, dados):
         prompt = {
             "role": "system",
             "content": (
-                "Considere as informações abaixo salvas anteriormente como contexto atual do sistema:\n\n"
+                
+                "Abaixo estão instruções e informações fixas que foram previamente salvas pelo operador humano em uma memória externa (arquivo memory_gpt.json). Use-as como base de conhecimento permanente:\n\n"
                 f"{memoria_atual}\n\n"
-                "Agora, analise os dados enviados e tome sua decisão com base nisso."
+                "Sempre use esse conhecimento para tomar decisões, dar avisos e manter contexto das operações. Nunca ignore essas instruções, mesmo que elas não estejam no JSON atual."
             )
         }
 
@@ -101,10 +102,10 @@ def enviar_para_gpt(tipo, dados):
 
         resposta_gpt = response.choices[0].message.content
 
-        # Print seguro pro terminal
+        # ✅ Print seguro pro terminal
         print(f"🧠 GPT ({tipo.upper()}): {resposta_gpt.encode('utf-8', errors='replace').decode('utf-8')}")
 
-        # Salvando no log
+        # ✅ Log no arquivo
         with open("log_envio_gpt.json", "a", encoding="utf-8") as f:
             json.dump({
                 "tipo": tipo,
@@ -115,6 +116,7 @@ def enviar_para_gpt(tipo, dados):
 
     except Exception as e:
         print("❌ Erro ao enviar para o GPT:", e)
+
 
 
 # ======== MONITOR DE FILAS =========
