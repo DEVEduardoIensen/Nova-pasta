@@ -1,4 +1,3 @@
-# main.py
 import threading
 import time
 import json
@@ -9,10 +8,25 @@ import winsound
 import os
 import openai
 from utils_memory import exportar_memoria_texto
+from utils_memoria_curta import carregar_memoria_curta, salvar_memoria_curta, apagar_da_memoria_curta  # ✅ imports unificados
 
 # ======== GPT CONFIG - API OFICIAL OPENAI ========
 openai.api_key = os.getenv("OPENAI_API_KEY")
 modelo = "gpt-4.1-mini-2025-04-14"
+
+# ======== CACHE DAS MEMÓRIAS (2 MINUTOS) ========
+memoria_cache = ""
+memoria_curta_cache = ""
+ultima_atualizacao = 0
+
+def atualizar_memorias():
+    global memoria_cache, memoria_curta_cache, ultima_atualizacao
+    agora = time.time()
+    if agora - ultima_atualizacao >= 120:
+        memoria_cache = exportar_memoria_texto()
+        memoria_curta = carregar_memoria_curta()
+        memoria_curta_cache = json.dumps(memoria_curta, indent=2, ensure_ascii=False)  # ✅ agora envia como JSON real
+        ultima_atualizacao = agora
 
 # ======== LIMPEZA DE LOG GPT ========
 def limpar_log_periodicamente(intervalo=5):
@@ -79,15 +93,16 @@ def monitorar_ip():
 # ======== GPT ENVIO =========
 def enviar_para_gpt(tipo, dados):
     try:
-        memoria_atual = exportar_memoria_texto()
+        atualizar_memorias()  # ✅ Atualiza caches de memória se passaram 2 minutos
 
         prompt = {
             "role": "system",
             "content": (
-                
-                "Abaixo estão instruções e informações fixas que foram previamente salvas pelo operador humano em uma memória externa (arquivo memory_gpt.json). Use-as como base de conhecimento permanente:\n\n"
-                f"{memoria_atual}\n\n"
-                "Sempre use esse conhecimento para tomar decisões, dar avisos e manter contexto das operações. Nunca ignore essas instruções, mesmo que elas não estejam no JSON atual."
+                "Abaixo estão instruções e informações fixas do operador humano (memory_gpt.json):\n\n"
+                f"{memoria_cache}\n\n"
+                "Abaixo está a memória temporária atual (memoria_curta_gpt.json), enviada como JSON real:\n\n"
+                f"{memoria_curta_cache}\n\n"
+                "Use essas informações para decidir se deve salvar novos dados ou apagar dados antigos da memória curta. Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando for o caso."
             )
         }
 
@@ -105,6 +120,24 @@ def enviar_para_gpt(tipo, dados):
         # ✅ Print seguro pro terminal
         print(f"🧠 GPT ({tipo.upper()}): {resposta_gpt.encode('utf-8', errors='replace').decode('utf-8')}")
 
+        # ✅ Tenta interpretar a resposta como dict (direto ou via JSON)
+        try:
+            if isinstance(resposta_gpt, dict):
+                resposta_json = resposta_gpt
+            else:
+                resposta_json = json.loads(resposta_gpt)
+
+            if "salvar" in resposta_json:
+                salvar_memoria_curta(resposta_json["salvar"])
+                print("💾 GPT salvou na memória curta:", resposta_json["salvar"])
+
+            if "apagar" in resposta_json:
+                apagar_da_memoria_curta(resposta_json["apagar"])
+                print("🗑️ GPT apagou da memória curta:", resposta_json["apagar"])
+
+        except Exception as e:
+            pass  # ❌ Não era JSON válido, ou não tinha salvar/apagar
+
         # ✅ Log no arquivo
         with open("log_envio_gpt.json", "a", encoding="utf-8") as f:
             json.dump({
@@ -117,8 +150,6 @@ def enviar_para_gpt(tipo, dados):
     except Exception as e:
         print("❌ Erro ao enviar para o GPT:", e)
 
-
-
 # ======== MONITOR DE FILAS =========
 def monitorar_filas():
     while True:
@@ -128,12 +159,10 @@ def monitorar_filas():
 
         if not queue_fluxo.empty():
             pacote = queue_fluxo.get()
-
             enviar_para_gpt(pacote["tipo"], pacote["dados"])
 
         if not queue_book.empty():
             pacote = queue_book.get()
-            
             enviar_para_gpt(pacote["tipo"], pacote["dados"])
 
         time.sleep(0.01)
