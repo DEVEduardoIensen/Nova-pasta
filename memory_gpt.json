@@ -1,7 +1,13 @@
 {
   "modo_teste_memoria_curta": "ativo",
-  "salvar_todo_candle": "A cada JSON com campo 'kline_1m', salve esse candle na memória curta com uma chave NOVA que nunca foi usada antes. Ex: 'candle_1', 'candle_2', 'candle_3' etc.",
-  "apagar_quando_passar_4": "Se já houver 4 candles salvos, apague os mais antigos automaticamente com o comando 'apagar'.",
-  "formato_comandos": "Use sempre {'salvar': {...}} e {'apagar': [...]} como resposta única quando for salvar ou apagar candles.",
-  "importante": "Nunca use a mesma chave de novo. Se já salvou como 'candle_1', a próxima deve ser 'candle_2', depois 'candle_3' e assim por diante."
-}
+  
+  "memoria_curta": "Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como o valor em que voce entrou e quantos usdt usou, oque voce achar que precisa. Essa memória existe para manter contexto mesmo entre JSONs separados. Use os comandos {'salvar': {...}} ou {'apagar': [...]} para gerenciar essa memória.",
+
+  "liberdade_mensagem_para_usuario": "Você tem permissão para enviar mensagens diretamente ao operador humano. Use esse recurso com responsabilidade.",
+
+  "prioridade": "O foco principal do sistema é tomar decisões de trading com assertividade. Mensagens para o operador devem ser usadas com moderação e apenas quando podem gerar benefício direto à operação.",
+ "para_testes": {
+    "descricao": "Mas para testes pode ir salvando o que quiser, por que estou testando se voce consegue salvar e apagar dados da memória curta. para isso fique trocando o conteudo dela",
+
+  "formato_comandos": "Use sempre {'salvar': {...}} e {'apagar': [...]} como resposta única quando for salvar ou apagar . "
+}}
