@@ -22,7 +22,7 @@ ultima_atualizacao = 0
 def atualizar_memorias():
     global memoria_cache, memoria_curta_cache, ultima_atualizacao
     agora = time.time()
-    if agora - ultima_atualizacao >= 15:
+    if agora - ultima_atualizacao >= 120:
         memoria_cache = exportar_memoria_texto()
         memoria_curta = carregar_memoria_curta()
         memoria_curta_cache = json.dumps(memoria_curta, indent=2, ensure_ascii=False)
@@ -104,7 +104,7 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
                     f"{memoria_cache}\n\n"
                     "Abaixo está a memória temporária atual (memoria_curta_gpt.json), enviada como JSON real:\n\n"
                     f"{memoria_curta_cache}\n\n"
-                    "Use essas informações para decidir se deve salvar novos dados ou apagar dados antigos da memória curta. Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando for o caso."
+                    "Use essas informações para decidir se deve salvar novos dados ou apagar dados antigos da memória curta. Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando salvar use: operaçao: quantidade de usdt: e status da operaçao:, nada alem disso."
                 )
             }
             mensagens.append(prompt)
@@ -142,19 +142,17 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
     except Exception as e:
         print("❌ Erro ao enviar para o GPT:", e)
 
-# ✅ ENVIO EXCLUSIVO DAS MEMÓRIAS
-def enviar_memorias_para_gpt():
-    atualizar_memorias()
-    dados_memorias = {
-        "memory_gpt": memoria_cache,
-        "memoria_curta_gpt": json.loads(memoria_curta_cache)
-    }
-    enviar_para_gpt("memorias", dados_memorias, incluir_memorias=False)
-
+# ✅ ENVIO EXCLUSIVO DA MEMÓRIA FIXA A CADA 2 MIN
 def loop_envio_memorias():
     while True:
-        enviar_memorias_para_gpt()
-        time.sleep(15)
+        atualizar_memorias()
+        dados_memorias = {
+            "tipo": "memorias",
+            "memory_fixa": memoria_cache,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        enviar_para_gpt("memorias", dados_memorias, incluir_memorias=False)
+        time.sleep(1)
 
 # ======== MONITOR DE FILAS =========
 def monitorar_filas():
@@ -165,11 +163,15 @@ def monitorar_filas():
 
         if not queue_fluxo.empty():
             pacote = queue_fluxo.get()
-            enviar_para_gpt(pacote["tipo"], pacote["dados"], incluir_memorias=False)
+            dados = pacote["dados"].copy()
+            dados["memoria_curta"] = json.loads(memoria_curta_cache)
+            enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
         if not queue_book.empty():
             pacote = queue_book.get()
-            enviar_para_gpt(pacote["tipo"], pacote["dados"], incluir_memorias=False)
+            dados = pacote["dados"].copy()
+            dados["memoria_curta"] = json.loads(memoria_curta_cache)
+            enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
         time.sleep(0.01)
 

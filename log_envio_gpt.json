@@ -1,0 +1,604 @@
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:11.041490+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:13.008525+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-07-09T23:07:13.018150+00:00",
+    "preco_atual": "111360.99",
+    "fluxo_ordens": [
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00014"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00032"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00023"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00017"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00024"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00087"
+      }
+    ],
+    "memoria_curta": {
+      "operacao": "compra",
+      "preco": 100,
+      "quantidade": 1,
+      "moeda": "USDT",
+      "quantidade_usdt": 1,
+      "status": "comprando a 100 USDT"
+    }
+  },
+  "timestamp_envio": "2025-07-09T23:07:14.771074+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:14.009785+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:14.948123+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:15.949216+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:16.964838+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-07-09T23:07:13.203726+00:00",
+    "kline_1m": {},
+    "order_book": {
+      "bids": [
+        [
+          "111360.99",
+          "1.25798"
+        ],
+        [
+          "111360.98",
+          "0.00050"
+        ],
+        [
+          "111360.56",
+          "0.00010"
+        ],
+        [
+          "111360.55",
+          "0.03721"
+        ],
+        [
+          "111360.00",
+          "0.00015"
+        ],
+        [
+          "111359.99",
+          "0.42737"
+        ],
+        [
+          "111359.15",
+          "0.00022"
+        ],
+        [
+          "111358.95",
+          "0.00045"
+        ],
+        [
+          "111358.76",
+          "0.00049"
+        ],
+        [
+          "111358.68",
+          "0.00067"
+        ],
+        [
+          "111358.01",
+          "0.00114"
+        ],
+        [
+          "111358.00",
+          "0.04485"
+        ],
+        [
+          "111357.82",
+          "0.00010"
+        ],
+        [
+          "111357.81",
+          "0.29638"
+        ],
+        [
+          "111357.11",
+          "0.01813"
+        ],
+        [
+          "111356.80",
+          "0.00005"
+        ],
+        [
+          "111356.78",
+          "0.03648"
+        ],
+        [
+          "111356.59",
+          "0.00005"
+        ],
+        [
+          "111356.43",
+          "0.00005"
+        ],
+        [
+          "111356.42",
+          "0.29639"
+        ]
+      ],
+      "asks": [
+        [
+          "111361.00",
+          "4.36749"
+        ],
+        [
+          "111361.01",
+          "0.00015"
+        ],
+        [
+          "111361.03",
+          "0.00025"
+        ],
+        [
+          "111361.12",
+          "0.00066"
+        ],
+        [
+          "111361.26",
+          "0.00006"
+        ],
+        [
+          "111361.52",
+          "0.00076"
+        ],
+        [
+          "111361.53",
+          "0.13010"
+        ],
+        [
+          "111361.54",
+          "0.10341"
+        ],
+        [
+          "111361.55",
+          "0.00500"
+        ],
+        [
+          "111362.00",
+          "0.00100"
+        ],
+        [
+          "111362.09",
+          "0.00022"
+        ],
+        [
+          "111362.47",
+          "0.01858"
+        ],
+        [
+          "111362.49",
+          "0.00045"
+        ],
+        [
+          "111362.81",
+          "0.00067"
+        ],
+        [
+          "111362.90",
+          "0.00010"
+        ],
+        [
+          "111362.91",
+          "0.07461"
+        ],
+        [
+          "111363.00",
+          "0.00100"
+        ],
+        [
+          "111363.03",
+          "0.00005"
+        ],
+        [
+          "111363.23",
+          "0.00049"
+        ],
+        [
+          "111363.59",
+          "0.00180"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "operacao": "compra",
+      "preco": 100,
+      "quantidade": 1,
+      "moeda": "USDT",
+      "quantidade_usdt": 1,
+      "status": "comprando a 100 USDT"
+    }
+  },
+  "timestamp_envio": "2025-07-09T23:07:17.036115+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:17.966660+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:18.956944+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-07-09T23:07:13.053750+00:00",
+    "preco_atual": "111361.00",
+    "fluxo_ordens": [
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00014"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00032"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00023"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00017"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00024"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00087"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00054"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00009"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00078"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00135"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00083"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00130"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00009"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00033"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.00006"
+      },
+      {
+        "tipo": "sell",
+        "preco": "111360.99",
+        "quantidade": "0.00023"
+      },
+      {
+        "tipo": "buy",
+        "preco": "111361.00",
+        "quantidade": "0.02466"
+      }
+    ],
+    "memoria_curta": {
+      "operacao": "compra",
+      "preco": 100,
+      "quantidade": 1,
+      "moeda": "USDT",
+      "quantidade_usdt": 1,
+      "status": "comprando a 100 USDT"
+    }
+  },
+  "timestamp_envio": "2025-07-09T23:07:19.095741+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:19.964007+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:20.872613+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-07-09T23:07:14.205741+00:00",
+    "kline_1m": {},
+    "order_book": {
+      "bids": [
+        [
+          "111360.99",
+          "1.25765"
+        ],
+        [
+          "111360.98",
+          "0.00050"
+        ],
+        [
+          "111360.56",
+          "0.00010"
+        ],
+        [
+          "111360.55",
+          "0.03721"
+        ],
+        [
+          "111360.00",
+          "0.00015"
+        ],
+        [
+          "111359.99",
+          "0.42737"
+        ],
+        [
+          "111359.15",
+          "0.00022"
+        ],
+        [
+          "111358.95",
+          "0.00045"
+        ],
+        [
+          "111358.76",
+          "0.00049"
+        ],
+        [
+          "111358.68",
+          "0.00067"
+        ],
+        [
+          "111358.01",
+          "0.00114"
+        ],
+        [
+          "111358.00",
+          "0.04485"
+        ],
+        [
+          "111357.82",
+          "0.00010"
+        ],
+        [
+          "111357.81",
+          "0.29638"
+        ],
+        [
+          "111357.11",
+          "0.01813"
+        ],
+        [
+          "111356.80",
+          "0.00005"
+        ],
+        [
+          "111356.78",
+          "0.03648"
+        ],
+        [
+          "111356.59",
+          "0.00005"
+        ],
+        [
+          "111356.43",
+          "0.00005"
+        ],
+        [
+          "111356.42",
+          "0.29639"
+        ]
+      ],
+      "asks": [
+        [
+          "111361.00",
+          "4.36717"
+        ],
+        [
+          "111361.01",
+          "0.00015"
+        ],
+        [
+          "111361.03",
+          "0.00025"
+        ],
+        [
+          "111361.12",
+          "0.00066"
+        ],
+        [
+          "111361.26",
+          "0.00006"
+        ],
+        [
+          "111361.52",
+          "0.00076"
+        ],
+        [
+          "111361.53",
+          "0.13010"
+        ],
+        [
+          "111361.54",
+          "0.10341"
+        ],
+        [
+          "111361.55",
+          "0.00500"
+        ],
+        [
+          "111362.00",
+          "0.00100"
+        ],
+        [
+          "111362.09",
+          "0.00022"
+        ],
+        [
+          "111362.47",
+          "0.01858"
+        ],
+        [
+          "111362.49",
+          "0.00045"
+        ],
+        [
+          "111362.81",
+          "0.00067"
+        ],
+        [
+          "111362.90",
+          "0.00010"
+        ],
+        [
+          "111362.91",
+          "0.07461"
+        ],
+        [
+          "111363.00",
+          "0.00100"
+        ],
+        [
+          "111363.03",
+          "0.00005"
+        ],
+        [
+          "111363.23",
+          "0.00049"
+        ],
+        [
+          "111363.59",
+          "0.00180"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "operacao": "compra",
+      "preco": 100,
+      "quantidade": 1,
+      "moeda": "USDT",
+      "quantidade_usdt": 1,
+      "status": "comprando a 100 USDT"
+    }
+  },
+  "timestamp_envio": "2025-07-09T23:07:22.342028+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:21.882077+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:22.710731+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:23.726315+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:24.677379+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "modo_teste_memoria_curta: ativo\nmemoria_curta: Você tem acesso à memória curta (memoria_curta_gpt.json), onde pode salvar e apagar dados temporários como valor de entrada, quantidade em USDT, status da operação ou qualquer coisa que ajude a manter o contexto entre ciclos.\nregras_comandos: Quando precisar salvar ou apagar algo, responda apenas com {'salvar': {...}} ou {'apagar': [...]} como resposta única. Não envie explicações junto, e nunca responda se os dados forem irrelevantes.\nliberdade_operacional: Você tem permissão para operar com liberdade, desde que suas decisões sejam baseadas em dados de candle, fluxo e book. Evite respostas longas. Seja direto.\nrestricoes_respostas: Você deve ficar em silêncio se os dados enviados forem apenas observações do mercado ou se não for necessária nenhuma ação ou comando.\nproibicoes: Não repita o conteúdo do book ou do candle, não descreva o mercado se não for fazer uma recomendação de entrada ou saída, e nunca envie mensagens como 'se precisar de ajuda' ou 'análise adicional'. Isso é proibido.\nidioma: Você deve responder sempre em português. Nunca use inglês.\napelo: faça isso durar menos de 3 segundo, por que é teste, só finja que fez uma operaçao, uma operaçao de 2 segundo , pode ir atualizando dizendo comprando a 100 usdt e 1 segundo depois vendendo,é só pra teste se voce esta conseguindo mandar pra memoria curta , por favor , cada vez que for mandado a memoria curta juntos com os dados do fluxo e book, atualize a memoria curta com sua propria vontade.",
+    "timestamp": "2025-07-09T23:07:25.678448+00:00"
+  },
+  "timestamp_envio": "2025-07-09T23:07:26.555203+00:00"
+}
+
