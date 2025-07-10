@@ -1,7 +1,8 @@
 {
   "operacao": "compra",
-  "preco": 100,
-  "quantidade_usdt": 1,
+  "regras_comandos": "Aja com autonomia. A cada dado recebido, decida imediatamente se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
   "status": "comprando",
-  "preco_entrada": 100
+  "preco": 111339.27,
+  "quantidade_usdt": 1,
+  "preco_entrada": 111339.27
 }
