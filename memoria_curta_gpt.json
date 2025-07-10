@@ -1,7 +1,7 @@
 {
   "operacao": "compra",
   "preco": 100,
-  "quantidade_usdt": 100,
+  "quantidade_usdt": 1,
   "status": "comprando",
   "preco_entrada": 100
 }
