@@ -105,6 +105,7 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
                     "Abaixo está a memória temporária atual (memoria_curta_gpt.json), enviada como JSON real:\n\n"
                     f"{memoria_curta_cache}\n\n"
                     "Use essas informações para decidir se deve salvar novos dados ou apagar dados antigos da memória curta. Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando salvar use: operaçao: quantidade de usdt: e status da operaçao:, nada alem disso."
+                    " A cada dado que for enviado a voce , atualize a memoria curta com sua propria vontade, e sempre lembre o que a memoria fixa te falou, por que ela só é enviada 1 vez a cada dois minutos."
                 )
             }
             mensagens.append(prompt)
@@ -152,7 +153,7 @@ def loop_envio_memorias():
             "timestamp": datetime.now(timezone.utc).isoformat()
         }
         enviar_para_gpt("memorias", dados_memorias, incluir_memorias=False)
-        time.sleep(1)
+        time.sleep(120)
 
 # ======== MONITOR DE FILAS =========
 def monitorar_filas():

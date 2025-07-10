@@ -1,9 +1,1 @@
-{
-  "operacao": "compra",
-  "preco": 100,
-  "quantidade": 1,
-  "moeda": "USDT",
-  "quantidade_usdt": 100,
-  "status": "comprando",
-  "preco_entrada": 100
-}
+{}
