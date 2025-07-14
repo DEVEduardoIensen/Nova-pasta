@@ -2,9 +2,17 @@
   "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
   "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
   "sugestoes_para_operador": [
-    "Considerar reduzir a quantidade de níveis do book enviados para focar nos níveis com maior volume, melhorando a clareza e a velocidade de análise.",
-    "Avaliar a possibilidade de aumentar o filtro mínimo de volume para ordens no fluxo, descartando ordens muito pequenas que podem gerar ruído.",
-    "Manter a frequência do fluxo em 10 ms para garantir a captura de movimentos rápidos, mas aplicar filtros inteligentes para reduzir o volume de dados irrelevantes."
+    "Utilizar candle de 1 minuto para máxima assertividade conforme preferência.",
+    "Implementar fluxo com queue.get() para dados mais rápidos e controle de requisições, evitando estouro do RPM.",
+    "Formatar volume para níveis de 0.0001 para melhor visualização e precisão.",
+    "Limitar o book a 5 níveis para foco e clareza nas operações."
   ],
-  "Eduardo": "Então com base no que você disse, você quer menos níveis do book. Ok, vou tentar. Mas uma coisa: estou em dúvida. Por que diminuir a frequência do fluxo se é isso que manda no mercado? A tendência já vai ter acontecido. Eu só consigo diminuir o conteúdo do book e gráfico filtrando, e a frequência está em 10 ms. Diga meu nome pra eu saber que você leu isso. O fluxo está formatado assim: def formatar_preco(valor): return \"{:.2f}\".format(float(valor)); def formatar_volume(valor): return \"{:.5f}\".format(float(valor)); e o book assim: bids = [[formatar_preco(i[0]), formatar_volume(i[1])] for i in b[\"bids\"] if float(i[1]) >= 0.00001]; asks = [[formatar_preco(i[0]), formatar_volume(i[1])] for i in b[\"asks\"] if float(i[1]) >= 0.00001], e pra evitar as divergencias do fluxo e gracico o que voce me recomenda, aumentar a frequencia do candle e ser o candle dos 5 minutos, voce nao é obrigado a dar sugestoes .."
+  "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, prefere os candle de 1 m ou 3m ou 5m,para maxima  assertividade, e prefere que os dados vao mais rapidos? por que eles tem um times sleep de 10 ms na filas mas nao estao tao rapido, quer que eu tire o fluxo dessas filas e deixe ele com queue.get() e com limite de requisiçoes pra nao estourar o rpm que a openai coloca, da menos de 60 requisiçoes por minuto desse jeito que esta agora, voce quer um book com o volume formatado para aparecer niveis só com 0.0001 ou 0.001 ou 0.00001 e quantos niveis voce quer ",
+  "preferencias_operador": {
+    "candle_timeframe": "1m",
+    "dados_mais_rapidos": "sim",
+    "fluxo_com_queue_get": "sim",
+    "volume_formatado_para_niveis": "0.0001",
+    "niveis_no_book": "5"
+  }
 }

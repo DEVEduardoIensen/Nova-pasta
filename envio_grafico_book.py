@@ -20,15 +20,15 @@ def iniciar_grafico_book(queue):
             "open": formatar_preco(k["o"]),
             "high": formatar_preco(k["h"]),
             "low": formatar_preco(k["l"]),
-            "close": formatar_preco(k["c"]),
+            
             "volume": formatar_volume(k["v"]),
             "is_green": float(k["c"]) >= float(k["o"])
         }
 
     def on_book(ws, msg):
         b = json.loads(msg)
-        bids = [[formatar_preco(i[0]), formatar_volume(i[1])] for i in b["bids"] if float(i[1]) >= 0.00001]
-        asks = [[formatar_preco(i[0]), formatar_volume(i[1])] for i in b["asks"] if float(i[1]) >= 0.00001]
+        bids = [[formatar_preco(i[0]), formatar_volume(i[1])] for i in b["bids"] if float(i[1]) >= 0.0001]
+        asks = [[formatar_preco(i[0]), formatar_volume(i[1])] for i in b["asks"] if float(i[1]) >= 0.0001]
         dados["order_book"] = {"bids": bids, "asks": asks}
         dados["timestamp"] = datetime.now(timezone.utc).isoformat()
         queue.put({
@@ -40,4 +40,4 @@ def iniciar_grafico_book(queue):
         "wss://stream.binance.com:9443/ws/btcusdt@kline_1m", on_message=on_kline
     ).run_forever(), daemon=True).start()
 
-    websocket.WebSocketApp("wss://stream.binance.com:9443/ws/btcusdt@depth20", on_message=on_book).run_forever()
+    websocket.WebSocketApp("wss://stream.binance.com:9443/ws/btcusdt@depth10", on_message=on_book).run_forever()

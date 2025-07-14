@@ -12,7 +12,7 @@ from utils_memoria_curta import carregar_memoria_curta, salvar_memoria_curta, ap
 
 # ======== GPT CONFIG - API OFICIAL OPENAI ========
 openai.api_key = os.getenv("OPENAI_API_KEY")
-modelo = "gpt-4.1-mini-2025-04-14"
+modelo = "gpt-4.1-mini"
 
 # ======== CACHE DAS MEMÓRIAS (2 MINUTOS) ========
 memoria_cache = ""
@@ -174,7 +174,7 @@ def monitorar_filas():
             dados["memoria_curta"] = json.loads(memoria_curta_cache)
             enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
-        time.sleep(0.01)
+        time.sleep(0.001)
 
 # ======== INÍCIO =========
 if __name__ == "__main__":
