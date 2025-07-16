@@ -1,3 +1,9 @@
 {
-  "regras_comandos": "nao responda nada fique totalmente em silencio, nao fale nada sobre os books e nem nada"
+  "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+  "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+  "sugestoes_para_operador": [
+    "Filtrar ordens com quantidade menor que 0.00010 para reduzir ruído de bots e focar em ordens mais relevantes.",
+    "Ajustar o fluxo para ignorar ordens muito pequenas pode melhorar a qualidade dos dados e a assertividade das decisões."
+  ],
+  "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o fluxo  vai ficar aparecendo ordens de  0.00010 no minimo  por que tem muita ordem de 0.00005 que acho que pode ser bots, por que com taxas da binance e mais tentar lucro de 1 centavo é maluquisse com só isso de dinheiro né, o que acha de mudar, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme"
 }
