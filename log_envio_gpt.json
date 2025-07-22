@@ -1,506 +1,693 @@
 {
-  "tipo": "memorias",
-  "dados": {
-    "tipo": "memorias",
-    "memory_fixa": "",
-    "timestamp": "2025-07-16T01:21:51.961530+00:00"
-  },
-  "timestamp_envio": "2025-07-16T01:21:54.334717+00:00"
-}
-
-{
   "tipo": "fluxo",
   "dados": {
-    "timestamp": "2025-07-16T01:21:53.664664+00:00",
-    "preco_atual": "117794.73",
+    "timestamp": "2025-07-22T14:39:23.693254+00:00",
+    "preco_atual": "118651.88",
     "fluxo_ordens": [
       {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00049"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.88",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118651.89",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118652.37",
+        "quantidade": "0.00300"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118652.37",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118652.37",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118652.37",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118653.37",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118654.10",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118654.26",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118657.33",
+        "quantidade": "0.00151"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118657.33",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118657.60",
+        "quantidade": "0.00008"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118658.13",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118658.93",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.30",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.98",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.98",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.98",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.98",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.99",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.99",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118659.99",
+        "quantidade": "0.00005"
+      },
+      {
         "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
+        "preco": "118659.99",
+        "quantidade": "0.00007"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00017"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00614"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.03911"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00141"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00227"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00340"
+        "preco": "118660.00",
+        "quantidade": "0.00018"
       },
       {
         "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
+        "preco": "118659.99",
+        "quantidade": "0.00010"
       },
       {
         "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00970"
+        "preco": "118659.99",
+        "quantidade": "0.00200"
       },
       {
         "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00006"
+        "preco": "118659.99",
+        "quantidade": "0.00024"
+      },
+      {
+        "tipo": "sell",
+        "preco": "118659.99",
+        "quantidade": "0.00009"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00600"
+        "preco": "118660.00",
+        "quantidade": "0.00042"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.01535"
+        "preco": "118660.00",
+        "quantidade": "0.00042"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.03611"
+        "preco": "118660.00",
+        "quantidade": "0.01583"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.01019"
+        "preco": "118660.00",
+        "quantidade": "0.00005"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.04991"
+        "preco": "118660.00",
+        "quantidade": "0.00028"
       },
       {
         "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00591"
+        "preco": "118660.00",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00092"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00037"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.00",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.01",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.02",
+        "quantidade": "0.00001"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118660.02",
+        "quantidade": "0.00004"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118662.38",
+        "quantidade": "0.00050"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118662.62",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118663.39",
+        "quantidade": "0.00151"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118663.39",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118665.23",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118666.20",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118667.87",
+        "quantidade": "0.00054"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118668.22",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118668.22",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118668.22",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118668.90",
+        "quantidade": "0.00069"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118668.95",
+        "quantidade": "0.00046"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118669.42",
+        "quantidade": "0.00024"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118670.24",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118670.71",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118670.71",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118670.71",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118671.16",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118671.46",
+        "quantidade": "0.00537"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118671.46",
+        "quantidade": "0.06418"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118671.47",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118671.47",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118671.47",
+        "quantidade": "0.02059"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118670.63",
+        "quantidade": "0.00005"
+      },
+      {
+        "tipo": "buy",
+        "preco": "118670.63",
+        "quantidade": "0.00843"
+      },
+      {
+        "tipo": "sell",
+        "preco": "118670.62",
+        "quantidade": "0.00113"
+      },
+      {
+        "tipo": "sell",
+        "preco": "118670.62",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "sell",
+        "preco": "118670.62",
+        "quantidade": "0.01321"
+      },
+      {
+        "tipo": "sell",
+        "preco": "118670.62",
+        "quantidade": "0.00120"
+      },
+      {
+        "tipo": "sell",
+        "preco": "118670.62",
+        "quantidade": "0.00385"
       }
     ],
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "sugestoes_para_operador": [
-        ""
-      ],
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o fluxo  vai ficar aparecendo ordens de  0.00010 no minimo  por que tem muita ordem de 0.00005 que acho que pode ser bots, por que com taxas da binance e mais tentar lucro de 1 centavo é maluquisse com só isso de dinheiro né, o que acha de mudar, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme"
+      "sugestoes_para_operador": "",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o que voce acha de o ultima ordem do json for juntando todas as ordens 0.00005 daquele json por que tem muita ordem de 0.00005 que acho que pode ser bots, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme se voce gostaria assim, um exemplo é a ultima ordem ter 0.00015 isso quer dizer que foi 3 ordens de 0.00005, desse jeito eu economizo tokens"
     }
   },
-  "timestamp_envio": "2025-07-16T01:21:56.534645+00:00"
+  "timestamp_envio": "2025-07-22T14:39:25.696053+00:00"
+}
+
+{
+  "tipo": "memorias",
+  "dados": {
+    "tipo": "memorias",
+    "memory_fixa": "",
+    "timestamp": "2025-07-22T14:39:22.425069+00:00"
+  },
+  "timestamp_envio": "2025-07-22T14:39:25.921589+00:00"
 }
 
 {
   "tipo": "grafico_book",
   "dados": {
-    "timestamp": "2025-07-16T01:21:54.166000+00:00",
+    "timestamp": "2025-07-22T14:39:24.212183+00:00",
     "kline_1m": {
-      "open": "117820.63",
-      "high": "117820.64",
-      "low": "117794.73",
-      "volume": "12.11147",
-      "is_green": false
+      "open": "118604.93",
+      "high": "118660.00",
+      "low": "118604.93",
+      "volume": "2.36966",
+      "is_green": true
     },
     "order_book": {
       "bids": [
         [
-          "117794.73",
-          "3.45088"
+          "118659.99",
+          "6.98516"
         ],
         [
-          "117794.55",
-          "0.00858"
+          "118659.69",
+          "0.06166"
         ],
         [
-          "117794.39",
-          "0.00858"
+          "118658.78",
+          "0.00731"
         ],
         [
-          "117794.33",
-          "0.00254"
-        ],
-        [
-          "117794.18",
-          "0.00560"
-        ],
-        [
-          "117794.11",
+          "118658.77",
           "0.00010"
         ],
         [
-          "117793.69",
-          "0.00127"
+          "118658.76",
+          "0.06346"
         ],
         [
-          "117793.66",
-          "0.07332"
+          "118657.81",
+          "0.10452"
         ],
         [
-          "117793.46",
-          "0.02254"
+          "118657.61",
+          "0.00050"
+        ],
+        [
+          "118657.49",
+          "0.00010"
+        ],
+        [
+          "118657.48",
+          "0.08537"
         ]
       ],
       "asks": [
         [
-          "117794.74",
-          "1.03584"
+          "118660.00",
+          "0.02067"
         ],
         [
-          "117794.75",
-          "0.04922"
+          "118660.01",
+          "0.00010"
         ],
         [
-          "117795.36",
-          "0.00034"
+          "118662.38",
+          "0.00050"
         ],
         [
-          "117795.69",
-          "0.00063"
+          "118663.39",
+          "0.00161"
         ],
         [
-          "117796.08",
-          "0.00179"
+          "118664.63",
+          "0.00010"
         ],
         [
-          "117797.10",
-          "0.00055"
+          "118664.64",
+          "0.00025"
         ],
         [
-          "117797.59",
-          "0.00012"
+          "118665.10",
+          "0.00560"
         ]
       ]
     },
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "sugestoes_para_operador": [
-        ""
-      ],
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o fluxo  vai ficar aparecendo ordens de  0.00010 no minimo  por que tem muita ordem de 0.00005 que acho que pode ser bots, por que com taxas da binance e mais tentar lucro de 1 centavo é maluquisse com só isso de dinheiro né, o que acha de mudar, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme"
+      "sugestoes_para_operador": "",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o que voce acha de o ultima ordem do json for juntando todas as ordens 0.00005 daquele json por que tem muita ordem de 0.00005 que acho que pode ser bots, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme se voce gostaria assim, um exemplo é a ultima ordem ter 0.00015 isso quer dizer que foi 3 ordens de 0.00005, desse jeito eu economizo tokens"
     }
   },
-  "timestamp_envio": "2025-07-16T01:21:59.093157+00:00"
-}
-
-{
-  "tipo": "fluxo",
-  "dados": {
-    "timestamp": "2025-07-16T01:21:54.182034+00:00",
-    "preco_atual": "117794.74",
-    "fluxo_ordens": [
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00017"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00614"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.03911"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00141"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00227"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00340"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00970"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00006"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00600"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.01535"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.03611"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.01019"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.04991"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00591"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00036"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.03750"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00751"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.02587"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00040"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00005"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00005"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00005"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00005"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00005"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00005"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00063"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00050"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00050"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00049"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00605"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00527"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00990"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00013"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00569"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00300"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00360"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00097"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00417"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00004"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00328"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00044"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00147"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00187"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00006"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "sell",
-        "preco": "117794.73",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00132"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00029"
-      },
-      {
-        "tipo": "buy",
-        "preco": "117794.74",
-        "quantidade": "0.00289"
-      }
-    ],
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "sugestoes_para_operador": [
-        ""
-      ],
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o fluxo  vai ficar aparecendo ordens de  0.00010 no minimo  por que tem muita ordem de 0.00005 que acho que pode ser bots, por que com taxas da binance e mais tentar lucro de 1 centavo é maluquisse com só isso de dinheiro né, o que acha de mudar, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme"
-    }
-  },
-  "timestamp_envio": "2025-07-16T01:22:01.156947+00:00"
+  "timestamp_envio": "2025-07-22T14:39:27.425872+00:00"
 }
 
