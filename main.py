@@ -6,12 +6,15 @@ from queue import Queue
 import requests
 import winsound
 import os
-import openai
+from openai import OpenAI
+from dotenv import load_dotenv
+
 from utils_memory import exportar_memoria_texto
 from utils_memoria_curta import carregar_memoria_curta, salvar_memoria_curta, apagar_da_memoria_curta
 
-# ======== GPT CONFIG - API OFICIAL OPENAI ========
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# ======== CONFIG OPENAI ========
+load_dotenv()
+client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 modelo = "gpt-4.1-mini"
 
 # ======== CACHE DAS MEMÓRIAS (2 MINUTOS) ========
@@ -28,7 +31,6 @@ def atualizar_memorias():
         memoria_curta_cache = json.dumps(memoria_curta, indent=2, ensure_ascii=False)
         ultima_atualizacao = agora
 
-# ======== LIMPEZA DE LOG GPT ========
 def limpar_log_periodicamente(intervalo=50):
     while True:
         try:
@@ -38,18 +40,14 @@ def limpar_log_periodicamente(intervalo=50):
             print(f"❌ Erro ao limpar o log: {e}")
         time.sleep(intervalo)
 
-# ======== IMPORTANDO OS MÓDULOS =========
 from envio_fluxo import iniciar_fluxo
 from envio_grafico_book import iniciar_grafico_book
 
-# ======== FILAS =========
 queue_fluxo = Queue()
 queue_book = Queue()
-
 modo_pausa = False
 ip_atual = None
 
-# ======== IP =========
 def get_ip():
     try:
         return requests.get("https://api.ipify.org").text.strip()
@@ -90,7 +88,6 @@ def monitorar_ip():
             modo_pausa = False
             print("✔️ Retomando operação...\n")
 
-# ======== GPT ENVIO =========
 def enviar_para_gpt(tipo, dados, incluir_memorias=True):
     try:
         mensagens = []
@@ -104,15 +101,16 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
                     f"{memoria_cache}\n\n"
                     "Abaixo está a memória temporária atual (memoria_curta_gpt.json), enviada como JSON real:\n\n"
                     f"{memoria_curta_cache}\n\n"
-                    "Use essas informações para decidir se deve salvar novos dados ou apagar dados antigos da memória curta. Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando salvar use: operaçao: quantidade de usdt: e status da operaçao:, nada alem disso."
-                    "  atualize a memoria curta com sua propria vontade, e sempre lembre o que a memoria fixa te falou, por que ela só é enviada 1 vez a cada dois minutos."
+                    "Use essas informações para decidir se deve salvar novos dados ou apagar dados antigos da memória curta. "
+                    "Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando salvar use: operacao: quantidade de usdt: e status da operacao:. "
+                    "Nada além disso. Atualize a memória curta com sua própria vontade, e sempre lembre o que a memória fixa te falou, pois ela só é enviada 1 vez a cada dois minutos."
                 )
             }
             mensagens.append(prompt)
 
         mensagens.append({"role": "user", "content": json.dumps(dados)})
 
-        response = openai.chat.completions.create(
+        response = client.chat.completions.create(
             model=modelo,
             messages=mensagens,
             temperature=0.2
@@ -143,7 +141,6 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
     except Exception as e:
         print("❌ Erro ao enviar para o GPT:", e)
 
-# ✅ ENVIO EXCLUSIVO DA MEMÓRIA FIXA A CADA 2 MIN
 def loop_envio_memorias():
     while True:
         atualizar_memorias()
@@ -155,7 +152,6 @@ def loop_envio_memorias():
         enviar_para_gpt("memorias", dados_memorias, incluir_memorias=False)
         time.sleep(120)
 
-# ======== MONITOR DE FILAS =========
 def monitorar_filas():
     while True:
         if modo_pausa:
@@ -176,7 +172,6 @@ def monitorar_filas():
 
         time.sleep(0.001)
 
-# ======== INÍCIO =========
 if __name__ == "__main__":
     print("🧠 NeuroScalp MAIN rodando (API OpenAI, com memória ativa)...\n")
 
