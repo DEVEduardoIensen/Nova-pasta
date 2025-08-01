@@ -3,83 +3,75 @@
   "dados": {
     "tipo": "memorias",
     "memory_fixa": "",
-    "timestamp": "2025-07-26T05:07:55.379435+00:00"
+    "timestamp": "2025-08-01T15:16:09.742523+00:00"
   },
-  "timestamp_envio": "2025-07-26T05:07:56.987594+00:00"
+  "timestamp_envio": "2025-08-01T15:16:11.296972+00:00"
 }
 
 {
   "tipo": "grafico_book",
   "dados": {
-    "timestamp": "2025-07-26T05:07:57.215943+00:00",
+    "timestamp": "2025-08-01T15:16:11.190456+00:00",
     "kline_1m": {},
     "order_book": {
       "bids": [
         [
-          "117470.99",
-          "0.29330"
+          "115169.64",
+          "4.74819"
         ],
         [
-          "117470.98",
+          "115169.63",
+          "0.12000"
+        ],
+        [
+          "115168.00",
           "0.00010"
         ],
         [
-          "117470.00",
-          "0.00440"
+          "115167.99",
+          "0.08614"
         ],
         [
-          "117468.23",
+          "115167.46",
           "0.00010"
         ],
         [
-          "117468.22",
-          "0.30674"
+          "115167.45",
+          "0.27757"
         ],
         [
-          "117467.10",
-          "0.00272"
-        ],
-        [
-          "117465.16",
-          "0.00010"
+          "115167.44",
+          "0.35847"
         ]
       ],
       "asks": [
         [
-          "117471.00",
-          "13.50749"
+          "115169.65",
+          "0.82787"
         ],
         [
-          "117471.01",
-          "0.40179"
+          "115169.66",
+          "0.00060"
         ],
         [
-          "117471.32",
+          "115170.72",
+          "0.00539"
+        ],
+        [
+          "115172.00",
+          "0.00210"
+        ],
+        [
+          "115172.85",
           "0.00010"
         ],
         [
-          "117471.33",
-          "0.04192"
+          "115172.86",
+          "0.02637"
         ],
         [
-          "117471.58",
-          "0.01695"
-        ],
-        [
-          "117471.65",
-          "0.00010"
-        ],
-        [
-          "117471.66",
-          "0.28100"
-        ],
-        [
-          "117471.93",
-          "0.05985"
-        ],
-        [
-          "117472.70",
-          "0.01273"
+          "115174.32",
+          "0.00442"
         ]
       ]
     },
@@ -87,12 +79,219 @@
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
       "sugestoes_para_operador": [
-        "Sim, consolidar as ordens de 0.00005 em uma única ordem na última posição é uma prática eficiente para reduzir o volume de dados e economizar tokens, especialmente quando essas pequenas ordens são frequentes e provavelmente geradas por bots.",
-        "Essa agregação mantém a informação essencial do volume total naquela faixa de preço, simplificando a análise do fluxo e melhorando a eficiência do processamento sem perda significativa de dados."
+        "Confirmo que agregar as ordens de 0.00005 na última posição do JSON é uma boa prática para reduzir o volume de dados e economizar tokens, especialmente porque muitas dessas pequenas ordens provavelmente são geradas por bots. Essa consolidação mantém a informação essencial do volume total naquela faixa de preço, simplificando a análise do fluxo e melhorando a eficiência do processamento sem perda significativa de dados."
       ],
       "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o que voce acha de o ultima ordem do json for juntando todas as ordens 0.00005 daquele json por que tem muita ordem de 0.00005 que acho que pode ser bots, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme se voce gostaria assim, um exemplo é a ultima ordem ter 0.00015 isso quer dizer que foi 3 ordens de 0.00005, desse jeito eu economizo tokens"
     }
   },
-  "timestamp_envio": "2025-07-26T05:07:59.328007+00:00"
+  "timestamp_envio": "2025-08-01T15:16:13.286851+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-01T15:16:11.339641+00:00",
+    "preco_atual": "115172.86",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.00047"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.01302"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.66",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115170.72",
+        "quantidade": "0.00529"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115170.72",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115172.00",
+        "quantidade": "0.00200"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115172.00",
+        "quantidade": "0.00010"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115172.86",
+        "quantidade": "0.02627"
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.65",
+        "quantidade": "0.00095",
+        "agrupada": true
+      },
+      {
+        "tipo": "buy",
+        "preco": "115169.66",
+        "quantidade": "0.00050",
+        "agrupada": true
+      },
+      {
+        "tipo": "buy",
+        "preco": "115171.23",
+        "quantidade": "0.00005",
+        "agrupada": true
+      },
+      {
+        "tipo": "buy",
+        "preco": "115172.39",
+        "quantidade": "0.00005",
+        "agrupada": true
+      },
+      {
+        "tipo": "buy",
+        "preco": "115172.85",
+        "quantidade": "0.00015",
+        "agrupada": true
+      },
+      {
+        "tipo": "buy",
+        "preco": "115172.86",
+        "quantidade": "0.00015",
+        "agrupada": true
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "sugestoes_para_operador": [
+        "Confirmo que agregar as ordens de 0.00005 na última posição do JSON é uma boa prática para reduzir o volume de dados e economizar tokens, especialmente porque muitas dessas pequenas ordens provavelmente são geradas por bots. Essa consolidação mantém a informação essencial do volume total naquela faixa de preço, simplificando a análise do fluxo e melhorando a eficiência do processamento sem perda significativa de dados."
+      ],
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o que voce acha de o ultima ordem do json for juntando todas as ordens 0.00005 daquele json por que tem muita ordem de 0.00005 que acho que pode ser bots, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme se voce gostaria assim, um exemplo é a ultima ordem ter 0.00015 isso quer dizer que foi 3 ordens de 0.00005, desse jeito eu economizo tokens"
+    }
+  },
+  "timestamp_envio": "2025-08-01T15:16:15.639059+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-01T15:16:12.186210+00:00",
+    "kline_1m": {
+      "open": "115131.01",
+      "high": "115175.16",
+      "low": "115106.80",
+      "volume": "8.50558",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "115175.15",
+          "5.57158"
+        ],
+        [
+          "115175.05",
+          "0.00010"
+        ],
+        [
+          "115175.04",
+          "0.22157"
+        ],
+        [
+          "115172.90",
+          "0.00010"
+        ],
+        [
+          "115172.89",
+          "0.44462"
+        ],
+        [
+          "115172.88",
+          "0.00010"
+        ],
+        [
+          "115172.87",
+          "0.00010"
+        ],
+        [
+          "115172.86",
+          "0.00015"
+        ],
+        [
+          "115172.85",
+          "0.31390"
+        ]
+      ],
+      "asks": [
+        [
+          "115175.16",
+          "3.72068"
+        ],
+        [
+          "115175.17",
+          "0.00050"
+        ],
+        [
+          "115176.00",
+          "0.00210"
+        ],
+        [
+          "115177.48",
+          "0.00316"
+        ],
+        [
+          "115179.99",
+          "0.01277"
+        ],
+        [
+          "115180.00",
+          "0.01966"
+        ],
+        [
+          "115180.08",
+          "0.00150"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "sugestoes_para_operador": [
+        "Confirmo que agregar as ordens de 0.00005 na última posição do JSON é uma boa prática para reduzir o volume de dados e economizar tokens, especialmente porque muitas dessas pequenas ordens provavelmente são geradas por bots. Essa consolidação mantém a informação essencial do volume total naquela faixa de preço, simplificando a análise do fluxo e melhorando a eficiência do processamento sem perda significativa de dados."
+      ],
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, o que voce acha de o ultima ordem do json for juntando todas as ordens 0.00005 daquele json por que tem muita ordem de 0.00005 que acho que pode ser bots, basta voce olhar um json do fluxo e ver que a maioria é uma ordem de 0.00005, só me confirme se voce gostaria assim, um exemplo é a ultima ordem ter 0.00015 isso quer dizer que foi 3 ordens de 0.00005, desse jeito eu economizo tokens"
+    }
+  },
+  "timestamp_envio": "2025-08-01T15:16:19.308953+00:00"
 }
 
