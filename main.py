@@ -11,6 +11,8 @@ from dotenv import load_dotenv
 
 from utils_memory import exportar_memoria_texto
 from utils_memoria_curta import carregar_memoria_curta, salvar_memoria_curta, apagar_da_memoria_curta
+from envio_fluxo import iniciar_fluxo
+from envio_grafico_book import iniciar_grafico_book
 
 # ======== CONFIG OPENAI ========
 load_dotenv()
@@ -21,6 +23,8 @@ modelo = "gpt-4.1-mini"
 memoria_cache = ""
 memoria_curta_cache = ""
 ultima_atualizacao = 0
+
+def formatar_volume(valor): return "{:.5f}".format(float(valor))
 
 def atualizar_memorias():
     global memoria_cache, memoria_curta_cache, ultima_atualizacao
@@ -39,9 +43,6 @@ def limpar_log_periodicamente(intervalo=50):
         except Exception as e:
             print(f"❌ Erro ao limpar o log: {e}")
         time.sleep(intervalo)
-
-from envio_fluxo import iniciar_fluxo
-from envio_grafico_book import iniciar_grafico_book
 
 queue_fluxo = Queue()
 queue_book = Queue()
@@ -94,7 +95,7 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
 
         if incluir_memorias:
             atualizar_memorias()
-            prompt = {
+            mensagens.append({
                 "role": "system",
                 "content": (
                     "Abaixo estão instruções e informações fixas do operador humano (memory_gpt.json):\n\n"
@@ -105,8 +106,7 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
                     "Responda sempre com {'salvar': {...}} ou {'apagar': [...]} quando salvar use: operacao: quantidade de usdt: e status da operacao:. "
                     "Nada além disso. Atualize a memória curta com sua própria vontade, e sempre lembre o que a memória fixa te falou, pois ela só é enviada 1 vez a cada dois minutos."
                 )
-            }
-            mensagens.append(prompt)
+            })
 
         mensagens.append({"role": "user", "content": json.dumps(dados)})
 
@@ -141,17 +141,6 @@ def enviar_para_gpt(tipo, dados, incluir_memorias=True):
     except Exception as e:
         print("❌ Erro ao enviar para o GPT:", e)
 
-def loop_envio_memorias():
-    while True:
-        atualizar_memorias()
-        dados_memorias = {
-            "tipo": "memorias",
-            "memory_fixa": memoria_cache,
-            "timestamp": datetime.now(timezone.utc).isoformat()
-        }
-        enviar_para_gpt("memorias", dados_memorias, incluir_memorias=False)
-        time.sleep(120)
-
 def monitorar_filas():
     while True:
         if modo_pausa:
@@ -161,6 +150,33 @@ def monitorar_filas():
         if not queue_fluxo.empty():
             pacote = queue_fluxo.get()
             dados = pacote["dados"].copy()
+            ordens = dados.get("fluxo_ordens", [])
+
+            # Agrupamento direto no main
+            agrupador = {}
+            saida = []
+            for ordem in ordens:
+                tipo, preco = ordem["tipo"], ordem["preco"]
+                chave = (tipo, preco)
+                quant = float(ordem["quantidade"])
+                if abs(quant - 0.00005) < 1e-8:
+                    if chave not in agrupador:
+                        agrupador[chave] = [len(saida), quant]
+                        saida.append({
+                            "tipo": tipo,
+                            "preco": preco,
+                            "quantidade": ordem["quantidade"],
+                            "agrupada": True
+                        })
+                    else:
+                        idx, soma = agrupador[chave]
+                        soma += quant
+                        agrupador[chave][1] = soma
+                        saida[idx]["quantidade"] = formatar_volume(soma)
+                else:
+                    saida.append(ordem)
+
+            dados["fluxo_ordens"] = saida
             dados["memoria_curta"] = json.loads(memoria_curta_cache)
             enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
@@ -171,6 +187,17 @@ def monitorar_filas():
             enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
         time.sleep(0.001)
+
+def loop_envio_memorias():
+    while True:
+        atualizar_memorias()
+        dados_memorias = {
+            "tipo": "memorias",
+            "memory_fixa": memoria_cache,
+            "timestamp": datetime.now(timezone.utc).isoformat()
+        }
+        enviar_para_gpt("memorias", dados_memorias, incluir_memorias=False)
+        time.sleep(120)
 
 if __name__ == "__main__":
     print("🧠 NeuroScalp MAIN rodando (API OpenAI, com memória ativa)...\n")
