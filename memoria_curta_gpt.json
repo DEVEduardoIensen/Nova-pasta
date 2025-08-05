@@ -1,5 +1,10 @@
 {
   "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
   "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-  "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
+  "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+  "sugestoes_para_operador": [
+    "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+  ],
+  "frequencia_fluxo_ms": 1000,
+  "frequencia_envio_fluxo_ms": 1000
 }

@@ -3,1336 +3,2463 @@
   "dados": {
     "tipo": "memorias",
     "memory_fixa": "",
-    "timestamp": "2025-08-04T17:12:30.318640+00:00"
+    "timestamp": "2025-08-05T21:56:34.217993+00:00"
   },
-  "timestamp_envio": "2025-08-04T17:12:31.709728+00:00"
+  "timestamp_envio": "2025-08-05T21:56:35.663010+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:35.813871+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:37.143727+00:00"
 }
 
 {
   "tipo": "grafico_book",
   "dados": {
-    "timestamp": "2025-08-04T17:12:32.167475+00:00",
+    "timestamp": "2025-08-05T21:56:36.107742+00:00",
     "kline_1m": {},
     "order_book": {
       "bids": [
         [
-          "115682.45",
-          "7.01211"
+          "113606.52",
+          "3.86414"
         ],
         [
-          "115682.44",
-          "0.00025"
+          "113606.51",
+          "0.07644"
         ],
         [
-          "115682.29",
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.73",
           "0.00010"
         ],
         [
-          "115682.28",
-          "0.06684"
+          "113604.72",
+          "0.03971"
         ],
         [
-          "115681.76",
+          "113604.71",
           "0.00010"
-        ],
-        [
-          "115681.75",
-          "0.03147"
-        ],
-        [
-          "115681.73",
-          "0.00010"
-        ],
-        [
-          "115681.72",
-          "0.15107"
-        ],
-        [
-          "115681.71",
-          "0.07899"
         ]
       ],
       "asks": [
         [
-          "115682.46",
-          "1.80525"
+          "113606.53",
+          "1.47231"
         ],
         [
-          "115682.47",
-          "0.00030"
+          "113606.54",
+          "0.00060"
         ],
         [
-          "115682.66",
+          "113606.60",
           "0.00010"
         ],
         [
-          "115682.67",
-          "0.28538"
+          "113606.61",
+          "0.06504"
         ],
         [
-          "115682.75",
-          "0.00188"
+          "113607.06",
+          "0.00010"
         ],
         [
-          "115682.76",
-          "0.00752"
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
         ]
       ]
     },
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
     }
   },
-  "timestamp_envio": "2025-08-04T17:12:33.870826+00:00"
+  "timestamp_envio": "2025-08-05T21:56:38.138095+00:00"
 }
 
 {
   "tipo": "fluxo",
   "dados": {
-    "timestamp": "2025-08-04T17:12:32.313537+00:00",
-    "preco_atual": "115682.45",
+    "timestamp": "2025-08-05T21:56:37.017379+00:00",
+    "preco_atual": "113606.53",
     "fluxo_ordens": [
       {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.03138"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00172"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00013"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00033"
-      },
-      {
         "tipo": "buy",
-        "preco": "115682.46",
+        "preco": "113606.53",
         "quantidade": "0.00007"
       },
       {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00046"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00038"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00013"
-      },
-      {
         "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00006"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00033"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00700"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00100"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00044"
-      }
-    ],
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:34.590033+00:00"
-}
-
-{
-  "tipo": "grafico_book",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:33.172946+00:00",
-    "kline_1m": {
-      "open": "115594.99",
-      "high": "115682.46",
-      "low": "115594.99",
-      "volume": "34.94221",
-      "is_green": true
-    },
-    "order_book": {
-      "bids": [
-        [
-          "115682.45",
-          "7.23621"
-        ],
-        [
-          "115682.44",
-          "0.00020"
-        ],
-        [
-          "115681.79",
-          "0.00010"
-        ],
-        [
-          "115681.78",
-          "0.01768"
-        ],
-        [
-          "115681.76",
-          "0.00010"
-        ],
-        [
-          "115681.75",
-          "0.03147"
-        ],
-        [
-          "115681.73",
-          "0.00010"
-        ],
-        [
-          "115681.72",
-          "0.15107"
-        ],
-        [
-          "115681.71",
-          "0.07899"
-        ]
-      ],
-      "asks": [
-        [
-          "115682.46",
-          "1.74810"
-        ],
-        [
-          "115682.47",
-          "0.00025"
-        ],
-        [
-          "115682.66",
-          "0.00010"
-        ],
-        [
-          "115682.67",
-          "0.28538"
-        ],
-        [
-          "115682.75",
-          "0.00188"
-        ],
-        [
-          "115682.76",
-          "0.00752"
-        ]
-      ]
-    },
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:35.144929+00:00"
-}
-
-{
-  "tipo": "fluxo",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:33.313889+00:00",
-    "preco_atual": "115682.45",
-    "fluxo_ordens": [
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00056"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00043"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00700"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00019"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00087"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00032"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00015"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00017"
-      }
-    ],
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:36.506826+00:00"
-}
-
-{
-  "tipo": "grafico_book",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:34.165030+00:00",
-    "kline_1m": {
-      "open": "115594.99",
-      "high": "115682.46",
-      "low": "115594.99",
-      "volume": "34.94221",
-      "is_green": true
-    },
-    "order_book": {
-      "bids": [
-        [
-          "115682.45",
-          "7.21416"
-        ],
-        [
-          "115682.44",
-          "0.00010"
-        ],
-        [
-          "115682.43",
-          "0.02996"
-        ],
-        [
-          "115682.40",
-          "0.00010"
-        ],
-        [
-          "115682.39",
-          "0.06693"
-        ],
-        [
-          "115681.78",
-          "0.01758"
-        ],
-        [
-          "115681.76",
-          "0.00010"
-        ],
-        [
-          "115681.75",
-          "0.03137"
-        ],
-        [
-          "115681.73",
-          "0.00015"
-        ]
-      ],
-      "asks": [
-        [
-          "115682.46",
-          "0.18303"
-        ],
-        [
-          "115682.47",
-          "0.00015"
-        ],
-        [
-          "115682.75",
-          "0.00188"
-        ],
-        [
-          "115682.76",
-          "0.00762"
-        ]
-      ]
-    },
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:38.602274+00:00"
-}
-
-{
-  "tipo": "fluxo",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:34.314684+00:00",
-    "preco_atual": "115682.45",
-    "fluxo_ordens": [
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00663"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00700"
-      }
-    ],
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:39.505073+00:00"
-}
-
-{
-  "tipo": "grafico_book",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:35.168756+00:00",
-    "kline_1m": {
-      "open": "115594.99",
-      "high": "115682.46",
-      "low": "115594.99",
-      "volume": "34.96597",
-      "is_green": true
-    },
-    "order_book": {
-      "bids": [
-        [
-          "115682.45",
-          "6.66116"
-        ],
-        [
-          "115682.44",
-          "0.00025"
-        ],
-        [
-          "115682.43",
-          "0.02996"
-        ],
-        [
-          "115681.76",
-          "0.00010"
-        ],
-        [
-          "115681.75",
-          "0.03147"
-        ],
-        [
-          "115681.72",
-          "0.00010"
-        ],
-        [
-          "115681.71",
-          "0.07899"
-        ],
-        [
-          "115681.56",
-          "0.01728"
-        ],
-        [
-          "115680.98",
-          "0.01728"
-        ]
-      ],
-      "asks": [
-        [
-          "115682.46",
-          "3.52883"
-        ],
-        [
-          "115682.47",
-          "0.00030"
-        ],
-        [
-          "115682.75",
-          "0.00188"
-        ],
-        [
-          "115682.76",
-          "0.00762"
-        ]
-      ]
-    },
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:40.509197+00:00"
-}
-
-{
-  "tipo": "fluxo",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:35.315258+00:00",
-    "preco_atual": "115682.46",
-    "fluxo_ordens": [
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00006"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00019"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
+        "preco": "113606.53",
         "quantidade": "0.00018"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:38.827849+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:36.986020+00:00",
+    "kline_1m": {},
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.86414"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.71",
+          "0.00010"
+        ],
+        [
+          "113604.70",
+          "0.04122"
+        ],
+        [
+          "113604.09",
+          "0.03961"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.47211"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:40.582747+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:37.817852+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00008"
       },
       {
         "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00086"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00091"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.06952"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
+        "preco": "113606.53",
         "quantidade": "0.00008"
       },
       {
         "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00021"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00105"
-      }
-    ],
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:42.031432+00:00"
-}
-
-{
-  "tipo": "grafico_book",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:36.175247+00:00",
-    "kline_1m": {
-      "open": "115594.99",
-      "high": "115682.46",
-      "low": "115594.99",
-      "volume": "34.96597",
-      "is_green": true
-    },
-    "order_book": {
-      "bids": [
-        [
-          "115682.45",
-          "2.87189"
-        ],
-        [
-          "115682.44",
-          "0.00030"
-        ],
-        [
-          "115682.43",
-          "0.02996"
-        ],
-        [
-          "115681.76",
-          "0.00010"
-        ],
-        [
-          "115681.75",
-          "0.03147"
-        ],
-        [
-          "115681.72",
-          "0.00010"
-        ],
-        [
-          "115681.71",
-          "0.07899"
-        ],
-        [
-          "115680.70",
-          "0.00010"
-        ],
-        [
-          "115680.69",
-          "0.02685"
-        ]
-      ],
-      "asks": [
-        [
-          "115682.46",
-          "3.63758"
-        ],
-        [
-          "115682.47",
-          "0.04342"
-        ],
-        [
-          "115682.75",
-          "0.00188"
-        ],
-        [
-          "115682.76",
-          "0.00752"
-        ]
-      ]
-    },
-    "memoria_curta": {
-      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
-      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
-    }
-  },
-  "timestamp_envio": "2025-08-04T17:12:42.506860+00:00"
-}
-
-{
-  "tipo": "fluxo",
-  "dados": {
-    "timestamp": "2025-08-04T17:12:36.315430+00:00",
-    "preco_atual": "115682.45",
-    "fluxo_ordens": [
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00148"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.04322"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00020",
-        "agrupada": true
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00773"
+        "preco": "113606.52",
+        "quantidade": "0.00067"
       },
       {
         "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00015",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.09789"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00020"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.05271"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
+        "preco": "113606.52",
         "quantidade": "0.00082"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00083"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00155"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.13489"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00017"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00009"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.04000"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00019"
       }
     ],
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
     }
   },
-  "timestamp_envio": "2025-08-04T17:12:43.294961+00:00"
+  "timestamp_envio": "2025-08-05T21:56:41.540869+00:00"
 }
 
 {
   "tipo": "grafico_book",
   "dados": {
-    "timestamp": "2025-08-04T17:12:37.165107+00:00",
+    "timestamp": "2025-08-05T21:56:37.980522+00:00",
     "kline_1m": {
-      "open": "115594.99",
-      "high": "115682.46",
-      "low": "115594.99",
-      "volume": "35.38096",
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.36588",
       "is_green": true
     },
     "order_book": {
       "bids": [
         [
-          "115666.55",
-          "1.06479"
+          "113606.52",
+          "3.87154"
         ],
         [
-          "115666.54",
-          "0.00050"
+          "113606.51",
+          "0.07644"
         ],
         [
-          "115666.01",
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.63",
           "0.00010"
         ],
         [
-          "115665.85",
-          "0.00020"
+          "113605.62",
+          "0.03971"
         ],
         [
-          "115665.84",
-          "0.44934"
-        ],
-        [
-          "115665.72",
-          "0.00017"
-        ],
-        [
-          "115665.09",
-          "0.00300"
-        ],
-        [
-          "115664.73",
-          "0.00283"
-        ],
-        [
-          "115664.12",
-          "0.00010"
-        ]
-      ],
-      "asks": [
-        [
-          "115666.56",
-          "11.27752"
-        ],
-        [
-          "115666.97",
-          "0.13755"
-        ],
-        [
-          "115667.26",
-          "0.15060"
-        ],
-        [
-          "115667.28",
-          "0.26639"
-        ],
-        [
-          "115667.29",
-          "0.00020"
-        ],
-        [
-          "115667.44",
+          "113605.53",
           "0.00015"
         ],
         [
-          "115669.36",
-          "0.31120"
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.71",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.47190"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
         ]
       ]
     },
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
     }
   },
-  "timestamp_envio": "2025-08-04T17:12:44.369348+00:00"
+  "timestamp_envio": "2025-08-05T21:56:43.278247+00:00"
 }
 
 {
   "tipo": "fluxo",
   "dados": {
-    "timestamp": "2025-08-04T17:12:37.315887+00:00",
-    "preco_atual": "115674.26",
+    "timestamp": "2025-08-05T21:56:38.218409+00:00",
+    "preco_atual": "113606.53",
     "fluxo_ordens": [
       {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00045"
+      },
+      {
         "tipo": "sell",
-        "preco": "115682.45",
+        "preco": "113606.52",
+        "quantidade": "0.00037"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00323"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:44.314203+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:39.263217+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.36588",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.87293"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.98",
+          "0.00010"
+        ],
+        [
+          "113604.97",
+          "0.03971"
+        ],
+        [
+          "113604.71",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.60358"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:44.972956+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:38.619056+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00077"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:45.799214+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:40.058659+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.37242",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.87184"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113605.38",
+          "0.00010"
+        ],
+        [
+          "113605.37",
+          "0.03971"
+        ],
+        [
+          "113604.71",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.60325"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:47.210441+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:39.419691+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
         "quantidade": "0.00007"
       },
       {
         "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00222"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00006"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00094"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00010",
-        "agrupada": true
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.01690"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.00100"
-      },
-      {
-        "tipo": "buy",
-        "preco": "115682.46",
-        "quantidade": "0.06252"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00511"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.02000"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00088"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.04556"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00864"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00864"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00022"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00500"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00135",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.01742"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.03185"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00400"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.02000"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.04063"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00021"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00175"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00084"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00083"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00082"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00086"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00607"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00050"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00035"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.45",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.44",
-        "quantidade": "0.00040",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.44",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.01581"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.01390"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.00145",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.00172"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.43",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.42",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.42",
-        "quantidade": "0.00050",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115682.12",
-        "quantidade": "0.00015",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115681.97",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115681.76",
-        "quantidade": "0.00015",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115681.75",
-        "quantidade": "0.03112"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115681.75",
-        "quantidade": "0.00070",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115681.75",
-        "quantidade": "0.00010"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115681.71",
-        "quantidade": "0.00025",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115680.81",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115680.70",
-        "quantidade": "0.00015",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115680.69",
-        "quantidade": "0.02635"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115680.69",
-        "quantidade": "0.00035"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115680.69",
-        "quantidade": "0.00020",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115680.00",
-        "quantidade": "0.00010",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115679.96",
-        "quantidade": "0.00010",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115679.66",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115678.56",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115678.13",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115677.35",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115677.09",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115676.51",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115676.50",
-        "quantidade": "0.00020",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115675.56",
-        "quantidade": "0.00005",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.27",
-        "quantidade": "0.00020",
-        "agrupada": true
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.03850"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00100"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00050"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00050"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00864"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00100"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00100"
-      },
-      {
-        "tipo": "sell",
-        "preco": "115674.26",
-        "quantidade": "0.00100"
+        "preco": "113606.52",
+        "quantidade": "0.00118"
       }
     ],
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
     }
   },
-  "timestamp_envio": "2025-08-04T17:12:45.690677+00:00"
+  "timestamp_envio": "2025-08-05T21:56:47.912143+00:00"
 }
 
 {
   "tipo": "grafico_book",
   "dados": {
-    "timestamp": "2025-08-04T17:12:38.186423+00:00",
+    "timestamp": "2025-08-05T21:56:40.997380+00:00",
     "kline_1m": {
-      "open": "115594.99",
-      "high": "115682.46",
-      "low": "115594.99",
-      "volume": "35.38096",
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.37242",
       "is_green": true
     },
     "order_book": {
       "bids": [
         [
-          "115654.88",
-          "8.39246"
+          "113606.52",
+          "3.88060"
         ],
         [
-          "115654.63",
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113605.48",
           "0.00010"
         ],
         [
-          "115654.62",
-          "0.28555"
+          "113605.47",
+          "0.03961"
         ],
         [
-          "115654.20",
-          "0.00020"
-        ],
-        [
-          "115653.19",
-          "0.01739"
-        ],
-        [
-          "115653.03",
-          "0.01739"
-        ],
-        [
-          "115652.74",
+          "113605.46",
           "0.00010"
-        ],
-        [
-          "115652.73",
-          "0.06450"
         ]
       ],
       "asks": [
         [
-          "115654.89",
-          "0.30437"
+          "113606.53",
+          "1.18500"
         ],
         [
-          "115654.90",
-          "0.07603"
+          "113606.54",
+          "0.00060"
         ],
         [
-          "115656.23",
-          "0.02594"
-        ],
-        [
-          "115659.99",
-          "0.00043"
-        ],
-        [
-          "115660.00",
-          "0.02135"
-        ],
-        [
-          "115660.32",
+          "113606.60",
           "0.00010"
         ],
         [
-          "115660.33",
-          "0.28534"
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
         ]
       ]
     },
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
-      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, nao responda nada, fique em silencio absoluto, pra nao gastar tokens , 3estou fazendo testes ok"
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
     }
   },
-  "timestamp_envio": "2025-08-04T17:12:46.280960+00:00"
+  "timestamp_envio": "2025-08-05T21:56:48.528847+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:39.820395+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00008"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:49.484458+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:42.010104+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.44369",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.91801"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.71",
+          "0.00010"
+        ],
+        [
+          "113604.70",
+          "0.04122"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.18393"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:50.827844+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:40.220765+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00026"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00033"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:51.697888+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:43.024819+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.45196",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.87637"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.57",
+          "0.00010"
+        ],
+        [
+          "113605.56",
+          "0.00010"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113605.00",
+          "0.03961"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.35473"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:52.779529+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:40.621160+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.05527"
+      },
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.01394"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:53.367161+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:43.993025+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.45196",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.86920"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.87",
+          "0.00010"
+        ],
+        [
+          "113605.86",
+          "0.03971"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.71",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.35459"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:54.549568+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:41.022011+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:55.283163+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:44.991140+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.45196",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.86595"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.59",
+          "0.03961"
+        ],
+        [
+          "113605.57",
+          "0.00010"
+        ],
+        [
+          "113605.56",
+          "0.00010"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.31445"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:56.350140+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:41.422733+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00202"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:57.764512+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:45.993096+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.45570",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.87280"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113605.50",
+          "0.00010"
+        ],
+        [
+          "113605.49",
+          "0.03971"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.57972"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:58.375447+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:41.823308+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00015"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00093"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:56:59.048880+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:46.988552+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.45570",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.78572"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.13",
+          "0.03961"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ],
+        [
+          "113604.06",
+          "0.66550"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.32599"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.95",
+          "0.00880"
+        ],
+        [
+          "113611.69",
+          "0.00010"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:00.082333+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:42.223586+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00298"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00132"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:00.865646+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:47.987170+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.54092",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.37637"
+        ],
+        [
+          "113606.51",
+          "0.07649"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113605.26",
+          "0.00010"
+        ],
+        [
+          "113605.25",
+          "0.03971"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.37553"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.69",
+          "0.00010"
+        ],
+        [
+          "113610.70",
+          "0.29059"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:01.680560+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:43.024819+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00041"
+      },
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00025"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:03.980139+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:48.994833+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "0.54092",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.45774"
+        ],
+        [
+          "113606.51",
+          "0.07649"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.46",
+          "0.00010"
+        ],
+        [
+          "113604.45",
+          "0.03971"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.37546"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.69",
+          "0.00010"
+        ],
+        [
+          "113610.70",
+          "0.29059"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:04.898228+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:43.825483+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:05.803060+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:49.991835+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "1.31338",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.46632"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ],
+        [
+          "113604.06",
+          "0.66550"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.74866"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.69",
+          "0.00010"
+        ],
+        [
+          "113610.70",
+          "0.29059"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:06.491571+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:44.626681+00:00",
+    "preco_atual": "113606.52",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00346"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:07.769271+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:50.989477+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "1.31513",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.46685"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ],
+        [
+          "113604.06",
+          "0.66550"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.37455"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113610.69",
+          "0.00010"
+        ],
+        [
+          "113610.70",
+          "0.29059"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:09.060968+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:45.027319+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:09.724257+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:51.989690+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "1.31513",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.46468"
+        ],
+        [
+          "113606.51",
+          "0.07649"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ],
+        [
+          "113604.06",
+          "0.66550"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.61304"
+        ],
+        [
+          "113606.54",
+          "0.00055"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113609.73",
+          "0.00010"
+        ],
+        [
+          "113609.74",
+          "0.02230"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:11.050268+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:45.427762+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00007"
+      },
+      {
+        "tipo": "sell",
+        "preco": "113606.52",
+        "quantidade": "0.00008"
+      },
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00026"
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:12.643509+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:52.991288+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "1.31513",
+      "is_green": false
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.46471"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ],
+        [
+          "113604.06",
+          "0.66550"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.37213"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113609.73",
+          "0.00010"
+        ],
+        [
+          "113609.74",
+          "0.02230"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:15.394503+00:00"
+}
+
+{
+  "tipo": "fluxo",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:45.828086+00:00",
+    "preco_atual": "113606.53",
+    "fluxo_ordens": [
+      {
+        "tipo": "buy",
+        "preco": "113606.53",
+        "quantidade": "0.00005",
+        "agrupada": true
+      }
+    ],
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:17.405884+00:00"
+}
+
+{
+  "tipo": "grafico_book",
+  "dados": {
+    "timestamp": "2025-08-05T21:56:53.987802+00:00",
+    "kline_1m": {
+      "open": "113606.53",
+      "high": "113606.53",
+      "low": "113606.52",
+      "volume": "1.31773",
+      "is_green": true
+    },
+    "order_book": {
+      "bids": [
+        [
+          "113606.52",
+          "3.46493"
+        ],
+        [
+          "113606.51",
+          "0.07644"
+        ],
+        [
+          "113606.50",
+          "0.04006"
+        ],
+        [
+          "113605.53",
+          "0.00015"
+        ],
+        [
+          "113605.52",
+          "0.06092"
+        ],
+        [
+          "113604.07",
+          "0.00010"
+        ],
+        [
+          "113604.06",
+          "0.66550"
+        ]
+      ],
+      "asks": [
+        [
+          "113606.53",
+          "1.60655"
+        ],
+        [
+          "113606.54",
+          "0.00060"
+        ],
+        [
+          "113606.60",
+          "0.00010"
+        ],
+        [
+          "113606.61",
+          "0.06504"
+        ],
+        [
+          "113607.06",
+          "0.00010"
+        ],
+        [
+          "113607.07",
+          "0.03139"
+        ],
+        [
+          "113608.80",
+          "0.00011"
+        ],
+        [
+          "113609.73",
+          "0.00010"
+        ],
+        [
+          "113609.74",
+          "0.02230"
+        ]
+      ]
+    },
+    "memoria_curta": {
+      "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
+      "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
+      "Operador": " voce nao é obrigado a dar sugestoes, vou te dizer o que fazer, nao precisa responder outros prompt só esse ok, com base na assertividade e no tanto de ordens, quantos ms vocce quer que o json do fluxo seja mandado, agora esta em 0.4 segundos, lembre pra entrada exata e saida exata de uma operaçao, se imagine operando ja",
+      "sugestoes_para_operador": [
+        "Manter o envio do fluxo em 1000 ms (1 segundo) para garantir precisão na entrada e saída das operações, dado o volume e a liquidez observados no book."
+      ],
+      "frequencia_fluxo_ms": 1000,
+      "frequencia_envio_fluxo_ms": 1000
+    }
+  },
+  "timestamp_envio": "2025-08-05T21:57:18.115786+00:00"
 }
 

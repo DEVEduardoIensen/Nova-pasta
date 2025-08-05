@@ -18,7 +18,7 @@ def iniciar_fluxo(queue):
 
     def enviar_fluxo_periodicamente():
         while True:
-            time.sleep(1)  # envia a cada 1 segundo
+            time.sleep(0.4)  # envia a cada 1 segundo
             with lock:
                 if buffer_ordens:
                     preco_atual = buffer_ordens[-1]["preco"]
