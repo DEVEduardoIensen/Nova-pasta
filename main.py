@@ -2,7 +2,7 @@ import threading
 import time
 import json
 from datetime import datetime, timezone
-from queue import Queue
+from queue import Queue, Empty
 import requests
 import winsound
 import os
@@ -13,6 +13,7 @@ from utils_memory import exportar_memoria_texto
 from utils_memoria_curta import carregar_memoria_curta, salvar_memoria_curta, apagar_da_memoria_curta
 from envio_fluxo import iniciar_fluxo
 from envio_grafico_book import iniciar_grafico_book
+from envio_saldo import queue_saldo, iniciar_envio_saldo  # Import saldo aqui
 
 # ======== CONFIG OPENAI ========
 load_dotenv()
@@ -152,7 +153,6 @@ def monitorar_filas():
             dados = pacote["dados"].copy()
             ordens = dados.get("fluxo_ordens", [])
 
-            # Agrupamento direto no main
             agrupador = {}
             saida = []
             for ordem in ordens:
@@ -186,6 +186,16 @@ def monitorar_filas():
             dados["memoria_curta"] = json.loads(memoria_curta_cache)
             enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
+        # Novo: ler fila saldo e enviar pro GPT
+        from queue import Empty
+        try:
+            while not queue_saldo.empty():
+                pacote = queue_saldo.get_nowait()
+                dados = pacote["dados"]
+                enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
+        except Empty:
+            pass
+
         time.sleep(0.001)
 
 def loop_envio_memorias():
@@ -204,6 +214,7 @@ if __name__ == "__main__":
 
     threading.Thread(target=iniciar_fluxo, args=(queue_fluxo,), daemon=True).start()
     threading.Thread(target=iniciar_grafico_book, args=(queue_book,), daemon=True).start()
+    threading.Thread(target=iniciar_envio_saldo, daemon=True).start()  # Inicia saldo
     threading.Thread(target=monitorar_ip, daemon=True).start()
     threading.Thread(target=monitorar_filas, daemon=True).start()
     threading.Thread(target=limpar_log_periodicamente, daemon=True).start()
