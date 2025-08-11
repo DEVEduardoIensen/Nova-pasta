@@ -1,34 +1,100 @@
 {
+  "tipo": "saldo_estado",
+  "dados": {
+    "saldo": {
+      "BNB": 3.863e-05,
+      "USDT": 0.0
+    },
+    "em_operacao": false
+  },
+  "timestamp_envio": "2025-08-11T17:30:02.524421+00:00"
+}
+
+{
   "tipo": "memorias",
   "dados": {
     "tipo": "memorias",
     "memory_fixa": "",
-    "timestamp": "2025-08-09T16:29:45.231770+00:00"
+    "timestamp": "2025-08-11T17:29:59.777605+00:00"
   },
-  "timestamp_envio": "2025-08-09T16:29:46.584799+00:00"
+  "timestamp_envio": "2025-08-11T17:30:02.658397+00:00"
 }
 
 {
-  "tipo": "saldo",
+  "tipo": "grafico_book",
   "dados": {
-    "BNB": 5.78e-06,
-    "USDT": 0.0
-  },
-  "timestamp_envio": "2025-08-09T16:29:47.078250+00:00"
-}
-
-{
-  "tipo": "fluxo",
-  "dados": {
-    "timestamp": "2025-08-09T16:29:47.228223+00:00",
-    "preco_atual": "116730.19",
-    "fluxo_ordens": [
-      {
-        "tipo": "buy",
-        "preco": "116730.19",
-        "quantidade": "0.00129"
-      }
-    ],
+    "timestamp": "2025-08-11T17:30:01.401487+00:00",
+    "kline_1m": {},
+    "order_book": {
+      "bids": [
+        [
+          "119784.30",
+          "2.15561"
+        ],
+        [
+          "119784.29",
+          "0.00050"
+        ],
+        [
+          "119782.63",
+          "0.00010"
+        ],
+        [
+          "119782.62",
+          "0.10037"
+        ],
+        [
+          "119782.01",
+          "0.00010"
+        ],
+        [
+          "119782.00",
+          "0.06365"
+        ]
+      ],
+      "asks": [
+        [
+          "119784.31",
+          "12.11975"
+        ],
+        [
+          "119784.35",
+          "0.02483"
+        ],
+        [
+          "119784.83",
+          "0.25995"
+        ],
+        [
+          "119785.07",
+          "0.08000"
+        ],
+        [
+          "119785.72",
+          "0.31549"
+        ],
+        [
+          "119786.00",
+          "0.06340"
+        ],
+        [
+          "119786.48",
+          "0.05992"
+        ],
+        [
+          "119788.00",
+          "0.06340"
+        ],
+        [
+          "119788.37",
+          "0.54000"
+        ],
+        [
+          "119788.40",
+          "0.30053"
+        ]
+      ]
+    },
     "memoria_curta": {
       "regras_comandos": "Aja com autonomia.  decida  se deve salvar ou apagar algo na memória curta. Responda somente com {'salvar': {...}} ou {'apagar': [...]}. Nunca envie explicações, análises ou mensagens de contexto. Continue seguindo as regras fixas recebidas, mesmo quando não forem reenviadas.",
       "sugestoes": "Sua memória curta pode sugerir otimizações ao operador humano, como ajuste de frequência ou filtros. Use apenas: {\"salvar\": {\"sugestoes_para_operador\": [\"sugestão 1\", \"sugestão 2\"]}}. Exemplo: {\"salvar\": {\"sugestoes_para_operador\": [\"Reduzir fluxo para x ms\", \"Enviar apenas x níveis no book\"]}}. Evite repetir a mesma sugestão. Dê as sugestoes_para_operador bem explicadas do que eu posso melhorar para a sua assertividade. Você irá ser minha única fonte de renda, então não me decepcione, e me diga se você realmente tem certeza do que está dizendo, porque pra mim não parece uma boa ideia mexer no fluxo. Não repita sugestões que você já deu, senão eu me confundo. Faça tudo com base nos dados que você está recebendo.",
@@ -40,6 +106,54 @@
       "frequencia_envio_fluxo_ms": 1000
     }
   },
-  "timestamp_envio": "2025-08-09T16:29:48.122939+00:00"
+  "timestamp_envio": "2025-08-11T17:30:05.643909+00:00"
+}
+
+{
+  "tipo": "saldo_estado",
+  "dados": {
+    "saldo": {
+      "BNB": 3.863e-05,
+      "USDT": 0.0
+    },
+    "em_operacao": false
+  },
+  "timestamp_envio": "2025-08-11T17:30:07.017683+00:00"
+}
+
+{
+  "tipo": "saldo_estado",
+  "dados": {
+    "saldo": {
+      "BNB": 3.863e-05,
+      "USDT": 0.0
+    },
+    "em_operacao": false
+  },
+  "timestamp_envio": "2025-08-11T17:30:08.883871+00:00"
+}
+
+{
+  "tipo": "saldo_estado",
+  "dados": {
+    "saldo": {
+      "BNB": 3.863e-05,
+      "USDT": 0.0
+    },
+    "em_operacao": false
+  },
+  "timestamp_envio": "2025-08-11T17:30:10.786756+00:00"
+}
+
+{
+  "tipo": "saldo_estado",
+  "dados": {
+    "saldo": {
+      "BNB": 3.863e-05,
+      "USDT": 0.0
+    },
+    "em_operacao": false
+  },
+  "timestamp_envio": "2025-08-11T17:30:12.513719+00:00"
 }
 

@@ -13,7 +13,7 @@ from utils_memory import exportar_memoria_texto
 from utils_memoria_curta import carregar_memoria_curta, salvar_memoria_curta, apagar_da_memoria_curta
 from envio_fluxo import iniciar_fluxo
 from envio_grafico_book import iniciar_grafico_book
-from envio_saldo import queue_saldo, iniciar_envio_saldo  # Import saldo aqui
+from envio_saldo_estado import iniciar_saldo_estado  
 
 # ======== CONFIG OPENAI ========
 load_dotenv()
@@ -47,6 +47,10 @@ def limpar_log_periodicamente(intervalo=50):
 
 queue_fluxo = Queue()
 queue_book = Queue()
+
+#  fila para saldo+estado
+queue_saldo_estado = Queue()
+
 modo_pausa = False
 ip_atual = None
 
@@ -186,13 +190,11 @@ def monitorar_filas():
             dados["memoria_curta"] = json.loads(memoria_curta_cache)
             enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
 
-        # Novo: ler fila saldo e enviar pro GPT
-        from queue import Empty
+        #  processar fila saldo+estado
         try:
-            while not queue_saldo.empty():
-                pacote = queue_saldo.get_nowait()
-                dados = pacote["dados"]
-                enviar_para_gpt(pacote["tipo"], dados, incluir_memorias=False)
+            while not queue_saldo_estado.empty():
+                pacote = queue_saldo_estado.get_nowait()
+                enviar_para_gpt(pacote["tipo"], pacote["dados"], incluir_memorias=False)
         except Empty:
             pass
 
@@ -214,7 +216,7 @@ if __name__ == "__main__":
 
     threading.Thread(target=iniciar_fluxo, args=(queue_fluxo,), daemon=True).start()
     threading.Thread(target=iniciar_grafico_book, args=(queue_book,), daemon=True).start()
-    threading.Thread(target=iniciar_envio_saldo, daemon=True).start()  # Inicia saldo
+    threading.Thread(target=iniciar_saldo_estado, args=(queue_saldo_estado,), daemon=True).start()
     threading.Thread(target=monitorar_ip, daemon=True).start()
     threading.Thread(target=monitorar_filas, daemon=True).start()
     threading.Thread(target=limpar_log_periodicamente, daemon=True).start()
